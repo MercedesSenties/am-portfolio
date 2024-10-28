@@ -8,5 +8,6 @@
   "editor.bracketPairColorization.enabled": true,
   "gitlens.codeLens.enabled": true,
   "scss.lint.unknownAtRules": "ignore",
-  "css.lint.unknownAtRules": "ignore"
+  "css.lint.unknownAtRules": "ignore",
+  "i18n-ally.localesPaths": ["public/locales"]
 }

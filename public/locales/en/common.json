@@ -1,4 +1,10 @@
 {
-  "welcome": "Welcome",
-  "description": "This is the English description."
+  "header.projects": "Projects",
+  "header.aboutMe": "About Me",
+  "header.contact": "Contact",
+
+  "banner.hello": "Hey, I'm Ana Mercedes",
+  "banner.description": "I'm a programmer & community manager",
+
+  "about.description": "I'm a highly motivated and adaptable programmer and community manager from Mexico. I'm always seeking opportunities to learn more about new technologies and development practices. I've a strong desire of finding new ways of problem solving. I also love singing and taking long walks with my dog Ofelia."
 }

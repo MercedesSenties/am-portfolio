@@ -1,4 +1,10 @@
 {
-  "welcome": "Benevenuti",
-  "description": "Questa è la descripzione in italiano"
+  "header.projects": "Progetti",
+  "header.aboutMe": "Chi sono",
+  "header.contact": "Contatto",
+
+  "banner.hello": "Ciao, sono Ana Mercedes",
+  "banner.description": "Sono sviluppatore e community manager",
+
+  "about.description": "Sono una programmatrice e community manager messicana molto motivata e adattabile. Sono sempre alla ricerca di opportunità per imparare di più su nuove tecnologie e pratiche di sviluppo. Ho un forte desiderio di trovare nuovi modi per risolvere i problemi. Amo anche cantare e fare lunghe passeggiate con il mio cane Ofelia"
 }

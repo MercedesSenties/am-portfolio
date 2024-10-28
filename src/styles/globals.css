@@ -20,7 +20,7 @@ body {
   font-family: var(--font-raleway);
 }
 
-main {
+p {
   font-family: var(--font-raleway);
 }
 
@@ -31,4 +31,28 @@ h4,
 h5,
 h6 {
   font-family: var(--font-sketch);
+}
+
+.font-sketch {
+  font-family: var(--font-sketch);
+}
+
+/* Scroll to top style */
+.scrollToTop {
+  @apply bg-[#242424];
+  @apply text-white;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  height: 20px;
+  justify-content: center;
+  z-index: 999;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 1;
+}
+
+.scrollToTop:hover {
+  opacity: 1;
 }
