@@ -1,12 +1,20 @@
 import { TSkill } from "@/definitions/types";
 import {
   SiCsharp,
+  SiFigma,
+  SiFirebase,
+  SiGatsby,
+  SiGithub,
   SiGoogleanalytics,
+  SiGoogletagmanager,
+  SiHtml5,
   SiIonic,
   SiJavascript,
+  SiMeta,
   SiNextdotjs,
   SiReact,
   SiTailwindcss,
+  SiTiktok,
   SiTypescript,
   SiUnity,
   SiWordpress,
@@ -27,6 +35,16 @@ export const skillsData: TSkill[] = [
     id: "ionic",
     title: "Ionic",
     icon: SiIonic,
+  },
+  {
+    id: "gatsby",
+    title: "Gatsby",
+    icon: SiGatsby,
+  },
+  {
+    id: "html",
+    title: "HTML",
+    icon: SiHtml5,
   },
   {
     id: "typescript",
@@ -54,9 +72,39 @@ export const skillsData: TSkill[] = [
     icon: SiWordpress,
   },
   {
+    id: "figma",
+    title: "Figma",
+    icon: SiFigma,
+  },
+  {
+    id: "firebase",
+    title: "Firebase",
+    icon: SiFirebase,
+  },
+  {
+    id: "github",
+    title: "Github",
+    icon: SiGithub,
+  },
+  {
     id: "analytics",
     title: "Google Analytics",
     icon: SiGoogleanalytics,
+  },
+  {
+    id: "meta",
+    title: "Meta",
+    icon: SiMeta,
+  },
+  {
+    id: "tiktok",
+    title: "TikTok",
+    icon: SiTiktok,
+  },
+  {
+    id: "gtm",
+    title: "Google Tag Manager",
+    icon: SiGoogletagmanager,
   },
   {
     id: "unity",

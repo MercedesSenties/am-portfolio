@@ -22,6 +22,7 @@ body {
 
 p {
   font-family: var(--font-raleway);
+  @apply text-base md:text-lg lg:text-xl;
 }
 
 h1,
@@ -31,6 +32,10 @@ h4,
 h5,
 h6 {
   font-family: var(--font-sketch);
+}
+
+h2 {
+  @apply text-2xl sm:text-4xl;
 }
 
 .font-sketch {

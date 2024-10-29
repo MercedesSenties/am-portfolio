@@ -4,7 +4,12 @@
   "header.contact": "Contatto",
 
   "banner.hello": "Ciao, sono Ana Mercedes",
-  "banner.description": "Sono sviluppatore e community manager",
+  "banner.description": "Developer e tecnica specializzata in Digital Marketing",
 
-  "about.description": "Sono una programmatrice e community manager messicana molto motivata e adattabile. Sono sempre alla ricerca di opportunità per imparare di più su nuove tecnologie e pratiche di sviluppo. Ho un forte desiderio di trovare nuovi modi per risolvere i problemi. Amo anche cantare e fare lunghe passeggiate con il mio cane Ofelia"
+  "projects.intro": "Date un'occhiata ad alcuni dei miei progetti preferiti finora: siti web, giochi e un mix di tecnologie diverse!",
+
+  "about.description": "Sono una developer e tecnica specializzata in Digital Marketing, altamente motivata e adattabile. Originaria di Città del Messico, parlo fluentemente inglese e italiano. Con oltre un anno di esperienza in un'azienda di consulenza e sviluppo tecnologico, sono specializzata nella fornitura di soluzioni tecnologiche personalizzate che ottimizzano le strategie digitali, dalla massimizzazione delle prestazioni digitali allo sviluppo di applicazioni, siti web e negozi online. Il mio background comprende studi di programmazione e comunicazione. Al di fuori del lavoro, mi piace cantare, fare volontariato e fare lunghe passeggiate con la mia cagnolina Ofelia. Spinta dalla curiosità e dall'impegno a crescere, sono sempre alla ricerca di opportunità per conoscere nuove tecnologie e pratiche di sviluppo.",
+
+  "contact.title": "Mi piacerebbe entrare in contatto con voi!",
+  "contact.description": "Non esitate a inviarmi un messaggio su LinkedIn o a contattarmi via e-mail."
 }

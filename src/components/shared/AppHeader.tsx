@@ -1,5 +1,4 @@
-import { TLang } from "@/definitions/types";
-import { intl } from "@/helper/intl";
+import { ComponentProps, TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import useThemeSwitcher from "@/hooks/useThemeSwitcher";
 import Image from "next/image";
@@ -9,7 +8,7 @@ import { FiChevronDown, FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
 import logoDark from "/public/images/logo-dark.svg";
 import logoLight from "/public/images/logo-light.svg";
 
-const AppHeader: React.FC = () => {
+const AppHeader: React.FC<ComponentProps> = ({ t }) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
   const [activeTheme, setTheme] = useThemeSwitcher();
   const [activeLang, switchLanguage] = useLanguageSwitcher();
@@ -46,22 +45,22 @@ const AppHeader: React.FC = () => {
         {/* Header links large screen */}
         <div className="font-sketch hidden m-0 sm:ml-4 mt-5 sm:mt-3 sm:flex p-5 sm:p-0 justify-center items-center shadow-lg sm:shadow-none uppercase">
           <div
-            className="block text-left text-lg font-medium text-ternary-dark dark:text-ternary-light hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
+            className="block text-left text-lg font-medium hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
             aria-label="Projects"
           >
-            <Link href="#projects">{intl("header.projects")}</Link>
+            <Link href="#projects">{t("header.projects")}</Link>
           </div>
           <div
-            className="block text-left text-lg font-medium text-ternary-dark dark:text-ternary-light hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
+            className="block text-left text-lg font-medium hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
             aria-label="About Me"
           >
-            <Link href="#skills">{intl("header.aboutMe")}</Link>
+            <Link href="#skills">{t("header.aboutMe")}</Link>
           </div>
           <div
-            className="block text-left text-lg font-medium text-ternary-dark dark:text-ternary-light hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
+            className="block text-left text-lg font-medium hover:scale-125 sm:mx-4 mb-2 sm:py-2 duration-500"
             aria-label="Contact"
           >
-            <Link href="#contact">{intl("header.contact")}</Link>
+            <Link href="#contact">{t("header.contact")}</Link>
           </div>
         </div>
 
@@ -115,9 +114,9 @@ const AppHeader: React.FC = () => {
             aria-label="Hamburger Menu"
           >
             {showMenu ? (
-              <FiX className="text-3xl text-secondary-dark dark:text-ternary-light" />
+              <FiX className="text-3xl" />
             ) : (
-              <FiMenu className="text-3xl text-secondary-dark dark:text-ternary-light" />
+              <FiMenu className="text-3xl" />
             )}
           </button>
         </div>
@@ -131,31 +130,31 @@ const AppHeader: React.FC = () => {
             : "hidden"
         }
       >
-        <div className="font-sketch block text-left text-lg text-primary-dark dark:text-ternary-light hover:scale-110 sm:mx-4 mb-2 sm:py-2">
+        <div className="font-sketch block text-left text-lg hover:scale-110 sm:mx-4 mb-2 sm:py-2">
           <Link
             href="#projects"
             aria-label="Projects"
             onClick={() => setShowMenu(false)}
           >
-            {intl("header.projects")}
+            {t("header.projects")}
           </Link>
         </div>
-        <div className="font-sketch block text-left text-lg text-primary-dark dark:text-ternary-light hover:scale-110 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+        <div className="font-sketch block text-left text-lg hover:scale-110 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
           <Link
             href="#skills"
             aria-label="Skills"
             onClick={() => setShowMenu(false)}
           >
-            {intl("header.aboutMe")}
+            {t("header.aboutMe")}
           </Link>
         </div>
-        <div className="font-sketch block text-left text-lg text-primary-dark dark:text-ternary-light hover:scale-110 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
+        <div className="font-sketch block text-left text-lg hover:scale-110 sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-primary-light dark:border-secondary-dark">
           <Link
             href="#contact"
             aria-label="Contact"
             onClick={() => setShowMenu(false)}
           >
-            {intl("header.contact")}
+            {t("header.contact")}
           </Link>
         </div>
       </div>
