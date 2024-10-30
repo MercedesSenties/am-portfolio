@@ -11,22 +11,24 @@ export type TSkill = {
 };
 
 export type TProject = {
-  title: string;
-  description: string;
-  tags: string[];
-  role: string;
-  timeline: string;
   images: TImage[];
+  title: string;
+  tags: string[];
+  description: string;
+  timeline: string;
+  role?: string;
+  contributions: string[];
   team?: TTeamMember[];
+  buttonSrc?: string;
 };
 
 type TTeamMember = {
   name: string;
   role: string;
-  src: string;
+  src?: string;
 };
 
-type TImage = {
+export type TImage = {
   src: string;
   type: string;
 };

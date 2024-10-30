@@ -3,14 +3,14 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f7f8fc;
+  --foreground: #282843;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #282843;
+    --foreground: #f7f8fc;
   }
 }
 
@@ -22,7 +22,7 @@ body {
 
 p {
   font-family: var(--font-raleway);
-  @apply text-base md:text-lg lg:text-xl;
+  @apply text-sm md:text-base lg:text-lg;
 }
 
 h1,
@@ -40,6 +40,10 @@ h2 {
 
 .font-sketch {
   font-family: var(--font-sketch);
+}
+
+.font-raleway {
+  font-family: var(--font-raleway);
 }
 
 /* Scroll to top style */
@@ -60,4 +64,14 @@ h2 {
 
 .scrollToTop:hover {
   opacity: 1;
+}
+
+/* Mui styles */
+.MuiListItem-root {
+  display: block;
+  max-width: 250px;
+}
+
+.MuiListItemText-primary {
+  @apply font-sketch;
 }
