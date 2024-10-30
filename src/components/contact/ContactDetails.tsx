@@ -3,19 +3,16 @@ import { FiBriefcase, FiLinkedin, FiMail } from "react-icons/fi";
 
 const contacts = [
   {
-    id: 1,
     name: "anamercedes.senties@gmail.com",
     icon: <FiMail />,
     url: "mailto:anamercedes.senties@gmail.com",
   },
   {
-    id: 2,
     name: "Ana Mercedes Senties",
     icon: <FiLinkedin />,
     url: "https://www.linkedin.com/in/ana-mercedes-senties/",
   },
   {
-    id: 3,
     name: "Resume",
     icon: <FiBriefcase />,
     url: "/files/CV-AnaMercedes.pdf",
@@ -31,26 +28,24 @@ const ContactDetails: React.FC<ComponentProps> = ({ t }) => {
         </h2>
       </div>
       <div className="mt-8 flex md:flex-row items-center content-center gap-12 flex-col">
-        <div className="text-center sm:text-justify self-center">
+        <div className="text-center sm:text-left self-center">
           <h4 className="text-xl mb-2 sm:text-2xl">{t("contact.title")}</h4>
           <p>{t("contact.description")}</p>
         </div>
-        <ul className="self-center">
+        <ul className="mx-auto space-y-4 sm:mx-0">
           {contacts.map((contact) => (
-            <a
-              href={contact.url}
-              download="CV-AnaMercedes.pdf"
-              target="__blank"
-              key={contact.id}
-            >
-              <li
-                className="flex hover:scale-110 duration-500"
-                key={contact.id}
+            <li key={contact.name} className="hover:scale-110 duration-500">
+              <a
+                href={contact.url}
+                download="CV-AnaMercedes.pdf"
+                target="__blank"
               >
-                <i className="text-2xl pr-4">{contact.icon}</i>
-                <span className="text-lg mb-4">{contact.name}</span>
-              </li>
-            </a>
+                <div className="flex gap-2 items-center">
+                  <i className="text-2xl">{contact.icon}</i>
+                  <p>{contact.name}</p>
+                </div>
+              </a>
+            </li>
           ))}
         </ul>
       </div>

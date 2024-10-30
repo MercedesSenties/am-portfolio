@@ -1,7 +1,7 @@
 function AppFooterCopyright() {
   return (
     <div className=" flex justify-center items-center text-center py-6 px-6">
-      <div className="text-xs sm:text-base">
+      <p className="text-xs md:text-sm">
         {new Date().getFullYear()} &copy; AM, All Rights Reserved |
         <a
           href="https://emilia-schettino.com/"
@@ -10,7 +10,7 @@ function AppFooterCopyright() {
         >
           Animations: Emilia Schettino
         </a>
-      </div>
+      </p>
     </div>
   );
 }

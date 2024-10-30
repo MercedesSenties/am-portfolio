@@ -13,7 +13,7 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
         <h1 className="text-3xl md:text-5xl lg:text-5xl text-center sm:text-left uppercase !leading-tight">
           {t("banner.hello")}
         </h1>
-        <p className="mt-4 text-xl md:text-xl lg:text-3xl text-center sm:text-left">
+        <p className="mt-4 text-lg md:text-xl lg:text-2xl text-center sm:text-left">
           {t("banner.description")}
         </p>
       </div>

@@ -48,8 +48,7 @@ h2 {
 
 /* Scroll to top style */
 .scrollToTop {
-  @apply bg-[#242424];
-  @apply text-white;
+  @apply bg-white-lilac-100 text-white-lilac-950 dark:bg-white-lilac-800 dark:text-white-lilac-50;
   position: fixed;
   width: 100%;
   align-items: center;
@@ -70,6 +69,9 @@ h2 {
 .MuiListItem-root {
   display: block;
   max-width: 250px;
+}
+.MuiTooltip-tooltip {
+  @apply bg-white-lilac-50 text-white-lilac-950 dark:bg-white-lilac-700 dark:text-white-lilac-50;
 }
 
 .MuiListItemText-primary {

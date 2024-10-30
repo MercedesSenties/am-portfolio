@@ -11,7 +11,12 @@ function SkillsGrid() {
           key={skill.id}
           className="p-5 bg-white dark:bg-white-lilac-900 rounded-lg shadow-lg"
         >
-          <Tooltip title={skill.title} placement="bottom">
+          <Tooltip
+            title={skill.title}
+            disableFocusListener
+            followCursor
+            placement="bottom"
+          >
             <a>
               <skill.icon className="w-10 h-10 text-white-lilac-950 dark:text-white-lilac-50" />
             </a>
