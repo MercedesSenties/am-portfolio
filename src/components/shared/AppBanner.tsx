@@ -1,11 +1,17 @@
 import { ComponentProps } from "@/definitions/types";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
+import { useEffect, useState } from "react";
 import merceJump from "/public/images/merceJump.gif";
 import merceYellow from "/public/images/merceYellow.gif";
 
 const AppBanner: React.FC<ComponentProps> = ({ t }) => {
-  const myImages = [merceJump, merceYellow];
-  const randomImage = Math.floor(Math.random() * myImages.length);
+  const [randomImage, setRandomImage] = useState<StaticImageData | null>(null);
+  
+  useEffect(() => {
+    const myImages: StaticImageData[] = [merceJump, merceYellow];
+    const randomIndex = Math.floor(Math.random() * myImages.length);
+    setRandomImage(myImages[randomIndex]);
+  }, []);
 
   return (
     <div className="flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-2">
@@ -18,15 +24,20 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
         </p>
       </div>
 
-      <div className="mt-4">
-        <Image
-          src={myImages[randomImage]}
-          className="w-full cursor-default"
-          alt="Merce Image"
-          width={80}
-          height={80}
-        />
-      </div>
+      {
+        randomImage != null ? (
+            <div className="mt-4">
+              <Image
+                src={randomImage.src}
+                className="w-full cursor-default"
+                alt="Merce Image"
+                width={80}
+                height={80}
+                priority={true}
+              />
+            </div>
+        ) : (<></>)
+      }
     </div>
   );
 };

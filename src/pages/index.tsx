@@ -4,12 +4,13 @@ import Projects from "@/components/projects/ProjectsGrid";
 import AppBanner from "@/components/shared/AppBanner";
 import { GetStaticProps } from "next";
 import { useTranslation } from "next-i18next";
+import { i18n } from "next-i18next.config";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "es")),
+      ...(await serverSideTranslations(locale ?? "es", ["common"], {i18n})),
     },
   };
 };

@@ -2,7 +2,7 @@ import { Tooltip } from "@mui/material";
 import { useState } from "react";
 import { skillsData } from "../../data/skillsData";
 
-function SkillsGrid() {
+const SkillsGrid = () => {
   const [skills] = useState(skillsData);
   return (
     <div className="grid grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-3">

@@ -14,11 +14,11 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 import { LuExternalLink } from "react-icons/lu";
 import ImageSlider from "./ImageSlider";
 
-export interface ComponentProps {
+export interface ProjectProps {
   t: (key: string) => string;
   project: TProject;
 }
-const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
+const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
   const [openMore, setOpenMore] = React.useState(false);
   const [mounted, setMounted] = React.useState(false);
   const containerRef = React.useRef(null);
