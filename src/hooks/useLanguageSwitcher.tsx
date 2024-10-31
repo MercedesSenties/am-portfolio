@@ -9,6 +9,7 @@ const useLanguageSwitcher = (): [TLang, (language: TLang) => void] => {
   const router = useRouter();
 
   const switchLanguage = (language: TLang) => {
+    document.cookie = `NEXT_LOCALE=${language}`;
     i18n.changeLanguage(language);
     setActiveLang(language);
     router.push(router.asPath, router.asPath, { locale: language });

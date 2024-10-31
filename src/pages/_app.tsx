@@ -4,6 +4,7 @@ import AppFooterCopyright from "@/components/shared/AppFooterCopyright";
 import AppHeader from "@/components/shared/AppHeader";
 import UseScrollToTop from "@/hooks/useScrollToTop";
 import { appWithTranslation, useTranslation } from "next-i18next";
+import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
 import { Raleway } from "next/font/google";
 import localFont from "next/font/local";
@@ -28,16 +29,16 @@ const App = ({ Component, pageProps }: AppProps) => {
   const { t } = useTranslation();
 
   return (
-    <div
-      className={`bg-white-lilac-50 dark:bg-white-lilac-950 text-white-lilac-950 dark:text-white-lilac-50 transition duration-300 ${sketch.variable} ${raleway.variable}`}
-    >
-      <div>
+    <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+      <div
+        className={`bg-white-lilac-50 dark:bg-white-lilac-950 text-white-lilac-950 dark:text-white-lilac-50 transition duration-300 ${sketch.variable} ${raleway.variable}`}
+      >
         <AppHeader t={t} />
         <Component {...pageProps} />
         <AppFooterCopyright t={t} />
+        <UseScrollToTop />
       </div>
-      <UseScrollToTop />
-    </div>
+    </ThemeProvider>
   );
 };
 

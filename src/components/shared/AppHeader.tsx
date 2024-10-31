@@ -1,17 +1,24 @@
 import { ComponentProps, TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import useThemeSwitcher from "@/hooks/useThemeSwitcher";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import { FiChevronDown, FiMenu, FiMoon, FiSun, FiX } from "react-icons/fi";
 import logoDark from "/public/images/logo-dark.svg";
 import logoLight from "/public/images/logo-light.svg";
 
 const AppHeader: React.FC<ComponentProps> = ({ t }) => {
-  const [showMenu, setShowMenu] = useState<boolean>(false);
-  const [activeTheme, setTheme] = useThemeSwitcher();
+  const { theme, resolvedTheme, setTheme } = useTheme();
+  const [showMenu, setShowMenu] = React.useState<boolean>(false);
+  const [mounted, setMounted] = React.useState(false); 
   const [activeLang, switchLanguage] = useLanguageSwitcher();
+
+  React.useEffect(() => {
+    setMounted(true);
+    console.info("Theme:", theme)
+    console.info("Resolved:", resolvedTheme)
+  }, []);
 
   const toggleMenu = () => {
     setShowMenu((prev) => !prev);
@@ -24,13 +31,15 @@ const AppHeader: React.FC<ComponentProps> = ({ t }) => {
         {/* Logo */}
         <div className="text-center content-center">
           <div className="max-w-20 cursor-pointer">
-            <Link href="/">
-              {activeTheme === "dark" ? (
-                <Image src={logoDark} className="w-full" alt="Logo" />
-              ) : (
-                <Image src={logoLight} className="w-full" alt="Logo" />
-              )}
-            </Link>
+            {mounted && (
+              <Link href="/">
+                {resolvedTheme === "light" ? (
+                  <Image src={logoDark} className="w-full" alt="Logo" />
+                ) : (
+                  <Image src={logoLight} className="w-full" alt="Logo" />
+                )}
+              </Link>
+            )}
           </div>
         </div>
 
@@ -58,17 +67,18 @@ const AppHeader: React.FC<ComponentProps> = ({ t }) => {
 
         {/* Theme switcher*/}
         <div className="inline-flex gap-2 items-center h-10">
-          <div
-            onClick={() => setTheme(activeTheme)}
-            className="block bg-white dark:bg-white-lilac-900 p-3 shadow-md rounded-lg cursor-pointer h-full"
-          >
-            {activeTheme === "dark" ? (
-              <FiMoon className="text-white-lilac-950 hover:text-gray-400 dark:text-white-lilac-50 dark:hover:text-white-lilac-50" />
-            ) : (
-              <FiSun className="text-white-lilac-50 hover:text-gray-50" />
-            )}
-          </div>
-
+          {mounted && (
+            <div
+              onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
+              className="block bg-white dark:bg-white-lilac-900 p-3 shadow-md rounded-lg cursor-pointer h-full"
+            >
+              {resolvedTheme === "light" ? (
+                <FiMoon className="text-white-lilac-950 hover:text-gray-400 dark:text-white-lilac-50 dark:hover:text-white-lilac-50" />
+              ) : (
+                <FiSun className="text-white-lilac-50 hover:text-gray-50" />
+              )}
+            </div>
+          )}
           {/* Language switcher */}
           <div className="relative">
             <select
