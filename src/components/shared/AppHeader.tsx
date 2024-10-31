@@ -23,20 +23,12 @@ const AppHeader: React.FC<ComponentProps> = ({ t }) => {
       <div className="z-10 py-6 px-5 sm:px-0 flex justify-between items-center">
         {/* Logo */}
         <div className="text-center content-center">
-          <div className="max-w-20">
+          <div className="max-w-20 cursor-pointer">
             <Link href="/">
               {activeTheme === "dark" ? (
-                <Image
-                  src={logoDark}
-                  className="w-full cursor-pointer"
-                  alt="Logo"
-                />
+                <Image src={logoDark} className="w-full" alt="Logo" />
               ) : (
-                <Image
-                  src={logoLight}
-                  className="w-full cursor-pointer"
-                  alt="Logo"
-                />
+                <Image src={logoLight} className="w-full" alt="Logo" />
               )}
             </Link>
           </div>

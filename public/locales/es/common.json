@@ -6,14 +6,64 @@
   "banner.hello": "Hola, soy Ana Mercedes",
   "banner.description": "Programadora y especialista técnica en marketing digital",
 
-  "projects.intro": "¡Echa un vistazo a algunos de mis proyectos favoritos hasta la fecha: sitios web, juegos y una mezcla de diferentes tecnologías!",
+  "projects.intro": "¡Échale un ojo a algunos de mis proyectos favoritos hasta la fecha: sitios web, juegos y una mezcla de diferentes tecnologías!",
   "projects.duration": "Duración",
   "projects.role": "Rol",
   "projects.contributions": "Contribuciones",
   "projects.collaborators": "Colaboradores",
 
-  "about.description": "Soy programadora y especialista técnica en Marketing Digital, altamente motivada y adaptable. Originaria de la Ciudad de México, me desenvuelvo fluidamente en inglés e italiano. Con más de un año de experiencia tanto en una firma de consultoría tecnológica como en una de desarrollo, me especializo en brindar soluciones tecnológicas personalizadas que optimizan estrategias digitales, desde maximizar el rendimiento digital hasta desarrollar aplicaciones, sitios web y tiendas en línea. Mi formación incluye estudios en Programación, así como en Comunicación. Fuera del trabajo, disfruto cantar, hacer voluntariado y dar largos paseos con mi perrita, Ofelia. Impulsada por la curiosidad y un compromiso con el crecimiento, siempre busco oportunidades para aprender sobre nuevas tecnologías y prácticas de desarrollo.",
+  "projects.tag.networking": "Networking",
+  "projects.tag.gameDev": "Game Dev",
+  "projects.tag.C#": "C#",
+  "projects.tag.unity": "Unity",
+  "projects.tag.multiplayerOnline": "Multijugador Online",
+  "projects.tag.webDev": "Web Dev",
+  "projects.tag.wordpress": "Wordpress",
+  "projects.tag.html": "HTML",
+  "projects.tag.css": "CSS",
+  "projects.tag.shopify": "Shopify",
+  "projects.tag.liquid": "Liquid",
+  "projects.tag.facebook": "Facebook",
+  "projects.tag.google": "Google Suite",
+  "projects.tag.mailchimp": "Mailchimp",
+
+  "projects.fishyBusiness.description": "Juega como un pingüino papá que tiene que alimentar a sus hijos. Sumérgete para cazar a tus peces o abofetea para robar los del oponente, ¡con el fin de alimentar a tus crías y convertirte en el rey de los papás pingüino!",
+  "projects.fishyBusiness.timeline": "abril 2023 - agosto 2023",
+  "projects.fishyBusiness.role": "Programadora de gameplay, UI, audio & networking",
+  "projects.fishyBusiness.contribution.1": "Implementado el sistema de lobby usando Netcode para Game Objects y Unity Relay",
+  "projects.fishyBusiness.contribution.2": "Implementado el sistema de ataque que permite a los jugadores abofetearse unos a otros para robarles el pescado",
+  "projects.fishyBusiness.contribution.3": "Implementado el sistema de puntuación, permitiendo a los jugadores cumplir los deseos de sus bebés",
+  "projects.fishyBusiness.contribution.4": "Implementado toda la lógica de interfaz de usuario en el juego",
+  "projects.fishyBusiness.contribution.5": "Implementado toda la lógica de audio en el juego",
+  "projects.fishyBusiness.team.1.role": "PM, 2D & Tech Artist, & Level Designer",
+  "projects.fishyBusiness.team.2.role": "Artista 3D",
+  "projects.fishyBusiness.team.3.role": "Programadora de gameplay & UI",
+
+  "projects.granjaHogar.description": "Sitio web en Wordpress para una institución chihuahuense que ofrece un hogar y una vida digna a niños, niñas y adolescentes en situación de vulnerabilidad y pobreza extrema",
+  "projects.granjaHogar.timeline": "junio 2020 - julio 2020",
+  "projects.granjaHogar.role": "Desarrolladora de Wordpress",
+  "projects.granjaHogar.contribution.1": "Desarrollé el sitio web utilizando Wordpress",
+  "projects.granjaHogar.contribution.2": "Integré el diseño UI entregado por el cliente",
+
+  "projects.ruutel.description": "Una tienda online en Shopify que ofrece piezas de calidad a un precio accesible de México, Latinoamérica y Corea",
+  "projects.ruutel.timeline": "septiembre 2021 - octubre 2021",
+  "projects.ruutel.role": "Desarrolladora de Shopify",
+  "projects.ruutel.contribution.1": "Desarrollé el sitio web utilizando Shopify",
+  "projects.ruutel.contribution.2": "Integré el diseño UI entregado por el cliente",
+  "projects.ruutel.contribution.3": "Integré el cambio de moneda e idioma",
+
+  "projects.merce.description": "Un sitio web en Wordpress para una clínica de cirugía de corta estancia",
+  "projects.merce.timeline": "octubre 2019 - en curso",
+  "projects.merce.role": "Desarrolladora de Wordpress y community manager",
+  "projects.merce.contribution.1": "Desarrollé el sitio web utilizando Wordpress",
+  "projects.merce.contribution.2": "Gestiono la cuenta de Facebook y su comunidad",
+  "projects.merce.contribution.3": "Diseño y envío los boletines",
+  "projects.merce.contribution.4": "Gestiono el posicionamiento en Google de la clínica",
+
+  "about.description": "Soy una programadora y especialista técnica en Marketing Digital, altamente motivada y adaptable. Originaria de la Ciudad de México, me desenvuelvo fluidamente en inglés e italiano. Con más de un año de experiencia tanto en consultoría tecnológica como en empresas de desarrollo, sumado a tres años más de experiencia como freelance, he trabajado en la creación de sitios web, tiendas online y aplicaciones utilizando frameworks como Ionic y Gatsby, plataformas como Wordpress y Shopify, así como librerías como React. Además, gestiono la configuración técnica de las campañas de marketing digital, asegurándome de que los eventos cruciales, como el seguimiento del embudo de comercio electrónico, se implementen con precisión. Mi formación incluye estudios en Programación, así como en Comunicación. Fuera del trabajo, disfruto cantar, hacer voluntariado y dar largos paseos con mi perrita, Ofelia. Impulsada por la curiosidad y un compromiso con el crecimiento, siempre busco oportunidades para aprender sobre nuevas tecnologías y prácticas de desarrollo.",
 
   "contact.title": "¡Me encantaría ponernos en contacto!",
-  "contact.description": "No dude en enviarme un mensaje a través de LinkedIn o por correo electrónico."
+  "contact.description": "No dude en enviarme un mensaje a través de LinkedIn o por correo electrónico.",
+
+  "footer.text": "Todos los derechos reservados | Animaciones:"
 }

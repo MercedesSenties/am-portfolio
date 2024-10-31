@@ -13,6 +13,7 @@ import {
   SiMeta,
   SiNextdotjs,
   SiReact,
+  SiShopify,
   SiTailwindcss,
   SiTiktok,
   SiTypescript,
@@ -70,6 +71,11 @@ export const skillsData: TSkill[] = [
     id: "wordpress",
     title: "WordPress",
     icon: SiWordpress,
+  },
+  {
+    id: "shopify",
+    title: "Shopify",
+    icon: SiShopify,
   },
   {
     id: "figma",

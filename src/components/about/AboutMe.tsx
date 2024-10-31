@@ -1,4 +1,4 @@
-import Skills from "@/components/skills/SkillsGrid";
+import Skills from "@/components/about/SkillsGrid";
 import { ComponentProps } from "@/definitions/types";
 
 const AboutMe: React.FC<ComponentProps> = ({ t }) => {

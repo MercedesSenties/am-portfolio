@@ -67,7 +67,7 @@ h2 {
 
 /* Mui styles */
 .MuiListItem-root {
-  display: block;
+  display: block !important;
   max-width: 250px;
 }
 .MuiTooltip-tooltip {
@@ -75,5 +75,5 @@ h2 {
 }
 
 .MuiListItemText-primary {
-  @apply font-sketch;
+  @apply font-sketch !important;
 }

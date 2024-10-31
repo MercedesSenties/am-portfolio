@@ -15,14 +15,14 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
 };
 
 const Home = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="container mx-auto">
       <AppBanner t={t} />
       <Projects t={t} />
       <AboutMe t={t} />
-      <ContactDetails t={t} />
+      <ContactDetails t={t} i18n={i18n} />
     </div>
   );
 };

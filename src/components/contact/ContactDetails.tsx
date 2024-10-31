@@ -1,25 +1,35 @@
-import { ComponentProps } from "@/definitions/types";
+import { I18n } from "next-i18next";
 import { FiBriefcase, FiLinkedin, FiMail } from "react-icons/fi";
 
-const contacts = [
-  {
-    name: "anamercedes.senties@gmail.com",
-    icon: <FiMail />,
-    url: "mailto:anamercedes.senties@gmail.com",
-  },
-  {
-    name: "Ana Mercedes Senties",
-    icon: <FiLinkedin />,
-    url: "https://www.linkedin.com/in/ana-mercedes-senties/",
-  },
-  {
-    name: "Resume",
-    icon: <FiBriefcase />,
-    url: "/files/CV-AnaMercedes.pdf",
-  },
-];
+interface ContactProps {
+  t: (key: string) => string;
+  i18n: I18n;
+}
 
-const ContactDetails: React.FC<ComponentProps> = ({ t }) => {
+const ContactDetails: React.FC<ContactProps> = ({ t, i18n }) => {
+  const contacts = [
+    {
+      name: "anamercedes.senties@gmail.com",
+      icon: <FiMail />,
+      url: "mailto:anamercedes.senties@gmail.com",
+    },
+    {
+      name: "Ana Mercedes Senties",
+      icon: <FiLinkedin />,
+      url: "https://www.linkedin.com/in/ana-mercedes-senties/",
+    },
+    {
+      name: "Resume",
+      icon: <FiBriefcase />,
+      url:
+        i18n.language === "en"
+          ? "/files/CV-AnaMercedes-en.pdf"
+          : i18n.language === "es"
+            ? "/files/CV-AnaMercedes-es.pdf"
+            : "/files/CV-AnaMercedes-it.pdf",
+    },
+  ];
+
   return (
     <div id="contact" className="my-20">
       <div>

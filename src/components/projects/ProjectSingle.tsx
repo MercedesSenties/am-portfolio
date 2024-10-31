@@ -33,32 +33,33 @@ const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
   return (
     <div ref={containerRef} className="relative overflow-hidden">
       <Card
-        className={`shadow-none bg-white dark:bg-white-lilac-900 rounded-lg text-white-lilac-950 dark:text-white-lilac-50 transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
+        onClick={openMore ? () => setOpenMore(false) : () => {}}
+        className={`h-full flex shadow-none border border-white-lilac-100 dark:border-white-lilac-800 flex-col bg-white dark:bg-white-lilac-900 rounded-lg text-white-lilac-950 dark:text-white-lilac-50 transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
       >
-        <span onClick={openMore ? () => setOpenMore(false) : () => {}}>
-          <ImageSlider images={project.images} />
-          <CardContent className="space-y-2 pb-0">
-            <div className="flex gap-2 items-center justify-center">
-              <h4 className="text-lg">{project.title}</h4>
-              {project.buttonSrc && (
-                <a href={project.buttonSrc} target="__blank">
-                  <LuExternalLink className="text-right text-lg hover:scale-125" />
-                </a>
-              )}
-            </div>
+        <ImageSlider images={project.images} />
+        <CardContent className="gap-2 pb-0 flex flex-col justify-between flex-1">
+          <div className="flex gap-2 items-center justify-center">
+            <h4 className="text-lg">{project.title}</h4>
+            {project.buttonSrc && (
+              <a href={project.buttonSrc} target="__blank">
+                <LuExternalLink className="text-right text-lg hover:scale-125" />
+              </a>
+            )}
+          </div>
+          <div className="min-h-10 content-center">
             <div className="flex flex-wrap gap-1 justify-center">
               {project.tags.map((tag) => (
                 <p
                   key={tag}
                   className="px-3 bg-white-lilac-50 border border-white-lilac-900 dark:border-white-lilac-50 rounded-md text-xs dark:bg-white-lilac-800"
                 >
-                  {tag}
+                  {t(tag)}
                 </p>
               ))}
             </div>
-            <p>{project.description}</p>
-          </CardContent>
-          <CardActions className="justify-end">
+          </div>
+          <p className="flex-1">{t(project.description)}</p>
+          <CardActions className="flex justify-end p-2">
             <div
               onClick={() => setOpenMore(!openMore)}
               className="cursor-pointer"
@@ -70,15 +71,15 @@ const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
               )}
             </div>
           </CardActions>
-        </span>
+        </CardContent>
       </Card>
       <Slide in={openMore} direction="right" container={containerRef.current}>
-        <div className="absolute max-w-72 top-0 left-0 h-full bg-white dark:bg-white-lilac-900 px-2 overflow-y-auto z-10 rounded-s-lg">
+        <div className="absolute max-w-80 md:max-w-72 top-0 left-0 h-full bg-white dark:bg-white-lilac-900 px-2 overflow-y-auto z-10 rounded-s-lg">
           <List>
             <ListItem>
               <ListItemText
                 primary={t("projects.duration")}
-                secondary={project.timeline}
+                secondary={t(project.timeline)}
                 classes={{
                   secondary:
                     "text-white-lilac-950 dark:text-white-lilac-50 text-sm font-raleway",
@@ -89,7 +90,7 @@ const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
                 <>
                   <ListItemText
                     primary={t("projects.role")}
-                    secondary={project.role}
+                    secondary={t(project.role)}
                     classes={{
                       secondary:
                         "text-white-lilac-950 dark:text-white-lilac-50 text-sm font-raleway",
@@ -98,18 +99,18 @@ const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
                   <Divider className="border-white-lilac-950 dark:border-white-lilac-50 my-4" />
                 </>
               )}
-              <ListItem component="div" className="p-0">
+              <ListItem component="div" className="!p-0 my-2">
                 <h4 className="text-base">{t("projects.contributions")}</h4>
                 <ul className="mt-1 font-raleway text-sm list-disc pl-4 text-white-lilac-950 dark:text-white-lilac-50">
                   {project.contributions.map((item) => (
-                    <li key={item}>{item}</li>
+                    <li key={item}>{t(item)}</li>
                   ))}
                 </ul>
               </ListItem>
               {project.team && project.team.length > 0 && (
                 <>
                   <Divider className="border-white-lilac-950 dark:border-white-lilac-50 my-4" />
-                  <ListItem component="div" className="p-0">
+                  <ListItem component="div" className="!p-0 mt-2">
                     <h4 className="text-base">{t("projects.collaborators")}</h4>
                     <div className="space-y-2 mt-1">
                       {project.team.map((item) => (
@@ -125,7 +126,7 @@ const ProjectSingle: React.FC<ComponentProps> = ({ t, project }) => {
                               </a>
                             )}
                           </div>
-                          <p className="text-left text-xs">{item.role}</p>
+                          <p className="text-left text-xs">{t(item.role)}</p>
                         </div>
                       ))}
                     </div>
