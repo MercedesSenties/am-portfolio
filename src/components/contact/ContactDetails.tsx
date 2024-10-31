@@ -19,7 +19,7 @@ const ContactDetails: React.FC<ContactProps> = ({ t, i18n }) => {
       url: "https://www.linkedin.com/in/ana-mercedes-senties/",
     },
     {
-      name: "Resume",
+      name: t('contact.CV'),
       icon: <FiBriefcase />,
       url:
         i18n.language === "en"
