@@ -34,7 +34,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
     <div ref={containerRef} className="relative overflow-hidden">
       <Card
         onClick={openMore ? () => setOpenMore(false) : () => {}}
-        className={`h-full flex shadow-none flex-col bg-gray-300 bg-opacity-30 rounded-lg text-[var(--primary-color)] transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
+        className={`h-full flex shadow-none flex-col bg-[var(--color--primary--5)] rounded-lg text-[var(--color--primary--100)] transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
       >
         <ImageSlider images={project.images} />
         <CardContent className="gap-2 pb-0 flex flex-col justify-between flex-1">
@@ -81,8 +81,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
                 primary={t("projects.duration")}
                 secondary={t(project.timeline)}
                 classes={{
-                  secondary:
-                    "text-white-lilac-950 dark:text-white-lilac-50 text-sm font-raleway",
+                  secondary: "text-sm font-raleway",
                 }}
               />
               <Divider className="my-4" />
@@ -92,16 +91,15 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
                     primary={t("projects.role")}
                     secondary={t(project.role)}
                     classes={{
-                      secondary:
-                        "text-white-lilac-950 dark:text-white-lilac-50 text-sm font-raleway",
+                      secondary: "text-sm font-raleway",
                     }}
                   />
-                  <Divider className="border-white-lilac-950 dark:border-white-lilac-50 my-4" />
+                  <Divider className="my-4" />
                 </>
               )}
               <ListItem component="div" className="!p-0 my-2">
                 <h4 className="text-base">{t("projects.contributions")}</h4>
-                <ul className="mt-1 font-raleway text-sm list-disc pl-4 text-white-lilac-950 dark:text-white-lilac-50">
+                <ul className="mt-1 font-raleway text-sm list-disc pl-4">
                   {project.contributions.map((item) => (
                     <li key={item}>{t(item)}</li>
                   ))}
@@ -109,14 +107,14 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
               </ListItem>
               {project.team && project.team.length > 0 && (
                 <>
-                  <Divider className="border-white-lilac-950 dark:border-white-lilac-50 my-4" />
+                  <Divider className="my-4" />
                   <ListItem component="div" className="!p-0 mt-2">
                     <h4 className="text-base">{t("projects.collaborators")}</h4>
                     <div className="space-y-2 mt-1">
                       {project.team.map((item) => (
                         <div
                           key={item.name}
-                          className="shadow rounded-lg py-2 px-3 bg-white-lilac-50 dark:bg-white-lilac-800"
+                          className="shadow rounded-lg py-2 px-3"
                         >
                           <div className="flex flex-row items-center place-content-between">
                             <p className="text-base font-medium">{item.name}</p>

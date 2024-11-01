@@ -4,12 +4,14 @@
 
 :root {
   --background: #f7f8fc;
-  --primary-color: #282843;
-  --secondary-color: #282843;
+  --color--primary--100: rgb(40, 40, 67 / 1);
+  --color--primary--33: rgb(40, 40, 67 / 0.45);
+  --color--primary--15: rgb(40, 40, 67 / 0.22);
+  --color--primary--5: rgb(40, 40, 67 / 0.12);
 }
 
 body {
-  color: var(--primary-color);
+  color: var(--color--primary--100);
   background: var(--background);
   font-family: var(--font-raleway);
 }
@@ -38,7 +40,6 @@ h2 {
 
 /* Scroll to top style */
 .scrollToTop {
-  @apply bg-white-lilac-100 text-white-lilac-950 dark:bg-white-lilac-800 dark:text-white-lilac-50;
   position: fixed;
   width: 100%;
   align-items: center;

@@ -51,16 +51,16 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
           className="transition-all duration-500 ease-in-out"
         />
         <button
-          className="absolute left-0 top-1/2 transform -translate-y-1/2 text-white"
+          className="absolute left-0 top-1/2 transform -translate-y-1/2"
           onClick={prevSlide}
         >
-          <HiChevronLeft className="w-8 h-8 text-white-lilac-50 hover:text-gray-200" />
+          <HiChevronLeft className="w-8 h-8" />
         </button>
         <button
-          className="absolute right-0 top-1/2 transform -translate-y-1/2 text-white"
+          className="absolute right-0 top-1/2 transform -translate-y-1/2"
           onClick={nextSlide}
         >
-          <HiChevronRight className="w-8 h-8 text-white-lilac-50 hover:text-gray-200" />
+          <HiChevronRight className="w-8 h-8" />
         </button>
       </div>
       <div className="flex justify-center mt-3 gap-2">
@@ -69,8 +69,8 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             key={index}
             className={`h-3 w-3 cursor-pointer ${
               index === currentIndex
-                ? "bg-[var(--primary-color)] rounded-xl"
-                : "bg-white-lilac-100 rounded-xl"
+                ? "bg-[var(--color--primary--100)] rounded-xl"
+                : "rounded-xl"
             } transition-all duration-500 ease-in-out`}
             onClick={() => setCurrentIndex(index)}
           ></div>

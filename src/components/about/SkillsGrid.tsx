@@ -12,7 +12,7 @@ const SkillsGrid = () => {
           title={skill.title}
           followCursor
           placement="bottom"
-          className="p-5 bg-gray-300 bg-opacity-30 rounded-lg shadow-lg"
+          className="p-5 bg-[var(--color--primary--5)] rounded-lg shadow-lg"
         >
           <a>
             <skill.icon className="w-10 h-10" />

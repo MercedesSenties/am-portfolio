@@ -33,8 +33,10 @@ export type TImage = {
 
 export type TThemeColor = {
   background: string;
-  primary: string;
-  secondary: string;
+  primary100: string;
+  primary33: string;
+  primary15: string;
+  primary5: string;
 };
 
 export interface ComponentProps {

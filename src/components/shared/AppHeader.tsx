@@ -11,17 +11,32 @@ const AppHeader: React.FC = () => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
 
   const changeThemeColors = (theme: number) => {
-    console.info("Theme: ", THEME_MAP[theme]);
-    console.info("Document; ", document.documentElement);
     document.documentElement.style.setProperty(
       "--background",
       THEME_MAP[theme].background
     );
     document.documentElement.style.setProperty(
-      "--primary-color",
-      THEME_MAP[theme].primary
+      "--color--primary--100",
+      THEME_MAP[theme].primary100
+    );
+    document.documentElement.style.setProperty(
+      "--color--primary--33",
+      THEME_MAP[theme].primary33
+    );
+    document.documentElement.style.setProperty(
+      "--color--primary--15",
+      THEME_MAP[theme].primary15
+    );
+    document.documentElement.style.setProperty(
+      "--color--primary--5",
+      THEME_MAP[theme].primary5
     );
   };
+
+  // Set color on first load
+  React.useEffect(() => {
+    changeThemeColors(1);
+  });
 
   return (
     <div className="sm:container sm:mx-auto">
@@ -30,16 +45,16 @@ const AppHeader: React.FC = () => {
         {/* Logo */}
         <div className="max-w-20">
           <Link href="/">
-            <SVGLogo className="fill-[var(--primary-color)] w-full h-full" />
+            <SVGLogo className="fill-[var(--color--primary--100)] w-full h-full" />
           </Link>
         </div>
 
         <div className="inline-flex gap-2 items-center h-10">
           {/* Theme switcher*/}
-          <div className="bg-white p-3 shadow-md rounded-lg cursor-pointer h-full">
-            <FiSun className="text-white-lilac-950" />
+          <div className="p-3 shadow-md rounded-lg cursor-pointer h-full">
+            <FiSun />
           </div>
-          <div className="w-32 bg-white bg-opacity-10 py-3 px-5 shadow rounded-lg h-full inline-flex items-center">
+          <div className="w-32 bg-opacity-10 py-3 px-5 shadow rounded-lg h-full inline-flex items-center">
             <Slider
               defaultValue={1}
               marks
@@ -69,10 +84,7 @@ const AppHeader: React.FC = () => {
               </option>
             </select>
             <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
-              <FiChevronDown
-                className="h-4 w-4 text-white-lilac-950 dark:text-white-lilac-50"
-                aria-hidden="true"
-              />
+              <FiChevronDown className="h-4 w-4" aria-hidden="true" />
             </div>
           </div>
         </div>
