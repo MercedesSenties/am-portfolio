@@ -34,7 +34,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
     <div ref={containerRef} className="relative overflow-hidden">
       <Card
         onClick={openMore ? () => setOpenMore(false) : () => {}}
-        className={`h-full flex shadow-none border border-white-lilac-100 dark:border-white-lilac-800 flex-col bg-white dark:bg-white-lilac-900 rounded-lg text-white-lilac-950 dark:text-white-lilac-50 transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
+        className={`h-full flex shadow-none flex-col bg-white bg-opacity-10 rounded-lg text-[var(--primary-color)] transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
       >
         <ImageSlider images={project.images} />
         <CardContent className="gap-2 pb-0 flex flex-col justify-between flex-1">
@@ -51,7 +51,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
               {project.tags.map((tag) => (
                 <p
                   key={tag}
-                  className="px-3 bg-white-lilac-50 border border-white-lilac-900 dark:border-white-lilac-50 rounded-md text-xs dark:bg-white-lilac-800"
+                  className="px-3 rounded-md text-xs bg-white bg-opacity-10"
                 >
                   {t(tag)}
                 </p>
@@ -74,7 +74,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
         </CardContent>
       </Card>
       <Slide in={openMore} direction="right" container={containerRef.current}>
-        <div className="absolute max-w-80 md:max-w-72 top-0 left-0 h-full bg-white dark:bg-white-lilac-900 px-2 overflow-y-auto z-10 rounded-s-lg">
+        <div className="absolute max-w-80 md:max-w-72 top-0 left-0 h-full bg-white px-2 overflow-y-auto z-10 rounded-s-lg">
           <List>
             <ListItem>
               <ListItemText
@@ -85,7 +85,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
                     "text-white-lilac-950 dark:text-white-lilac-50 text-sm font-raleway",
                 }}
               />
-              <Divider className="border-white-lilac-950 dark:border-white-lilac-50 my-4" />
+              <Divider className="my-4" />
               {project.role && (
                 <>
                   <ListItemText

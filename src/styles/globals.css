@@ -4,18 +4,12 @@
 
 :root {
   --background: #f7f8fc;
-  --foreground: #282843;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #282843;
-    --foreground: #f7f8fc;
-  }
+  --primary-color: #282843;
+  --secondary-color: #282843;
 }
 
 body {
-  color: var(--foreground);
+  color: var(--primary-color);
   background: var(--background);
   font-family: var(--font-raleway);
 }
@@ -31,15 +25,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-sketch);
+  font-family: var(--font-raleway);
 }
 
 h2 {
   @apply text-2xl sm:text-4xl;
-}
-
-.font-sketch {
-  font-family: var(--font-sketch);
 }
 
 .font-raleway {
@@ -69,11 +59,4 @@ h2 {
 .MuiListItem-root {
   display: block !important;
   max-width: 250px;
-}
-.MuiTooltip-tooltip {
-  @apply bg-white-lilac-50 text-white-lilac-950 dark:bg-white-lilac-700 dark:text-white-lilac-50;
-}
-
-.MuiListItemText-primary {
-  @apply font-sketch !important;
 }

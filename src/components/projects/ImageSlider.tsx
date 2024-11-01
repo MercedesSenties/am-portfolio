@@ -69,7 +69,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
             key={index}
             className={`h-3 w-3 cursor-pointer ${
               index === currentIndex
-                ? "bg-white-lilac-950 dark:bg-white-lilac-600 rounded-xl"
+                ? "bg-[var(--primary-color)] rounded-xl"
                 : "bg-white-lilac-100 rounded-xl"
             } transition-all duration-500 ease-in-out`}
             onClick={() => setCurrentIndex(index)}

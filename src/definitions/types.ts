@@ -2,8 +2,6 @@ import { IconType } from "react-icons";
 
 export type TLang = "es" | "en" | "it";
 
-export type TTheme = "dark" | "light";
-
 export type TSkill = {
   id: string;
   title: string;
@@ -31,6 +29,12 @@ type TTeamMember = {
 export type TImage = {
   src: string;
   type: string;
+};
+
+export type TThemeColor = {
+  background: string;
+  primary: string;
+  secondary: string;
 };
 
 export interface ComponentProps {

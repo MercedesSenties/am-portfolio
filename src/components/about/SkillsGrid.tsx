@@ -12,15 +12,15 @@ const SkillsGrid = () => {
           title={skill.title}
           followCursor
           placement="bottom"
-          className="p-5 bg-white dark:bg-white-lilac-900 rounded-lg shadow-lg"
+          className="p-5 bg-white bg-opacity-10 rounded-lg shadow-lg"
         >
           <a>
-            <skill.icon className="w-10 h-10 text-white-lilac-950 dark:text-white-lilac-50" />
+            <skill.icon className="w-10 h-10" />
           </a>
         </Tooltip>
       ))}
     </div>
   );
-}
+};
 
 export default SkillsGrid;
