@@ -34,7 +34,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
     <div ref={containerRef} className="relative overflow-hidden">
       <Card
         onClick={openMore ? () => setOpenMore(false) : () => {}}
-        className={`h-full flex shadow-none flex-col bg-white bg-opacity-10 rounded-lg text-[var(--primary-color)] transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
+        className={`h-full flex shadow-none flex-col bg-gray-300 bg-opacity-30 rounded-lg text-[var(--primary-color)] transform transition-transform duration-300 ease-out ${openMore ? "brightness-50" : ""}`}
       >
         <ImageSlider images={project.images} />
         <CardContent className="gap-2 pb-0 flex flex-col justify-between flex-1">
@@ -51,7 +51,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
               {project.tags.map((tag) => (
                 <p
                   key={tag}
-                  className="px-3 rounded-md text-xs bg-white bg-opacity-10"
+                  className="px-3 rounded-md text-xs bg-gray-300 bg-opacity-30"
                 >
                   {t(tag)}
                 </p>

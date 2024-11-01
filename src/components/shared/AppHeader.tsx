@@ -1,11 +1,11 @@
+import { THEME_MAP } from "@/definitions/constants";
 import { TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
+import { Slider } from "@mui/material";
 import Link from "next/link";
 import SVGLogo from "public/images/logo";
 import React from "react";
 import { FiChevronDown, FiSun } from "react-icons/fi";
-import { THEME_MAP } from "@/definitions/constants";
-import { Slider } from "@mui/material";
 
 const AppHeader: React.FC = () => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
@@ -39,7 +39,7 @@ const AppHeader: React.FC = () => {
           <div className="bg-white p-3 shadow-md rounded-lg cursor-pointer h-full">
             <FiSun className="text-white-lilac-950" />
           </div>
-          <div className="w-52 bg-white bg-opacity-10 py-3 px-5 shadow rounded-lg h-full inline-flex items-center">
+          <div className="w-32 bg-white bg-opacity-10 py-3 px-5 shadow rounded-lg h-full inline-flex items-center">
             <Slider
               defaultValue={1}
               marks
@@ -56,7 +56,7 @@ const AppHeader: React.FC = () => {
               name="language"
               value={activeLang}
               onChange={(e) => switchLanguage(e.target.value as TLang)}
-              className="shadow-lg bg-white text-white-lilac-950 block w-full appearance-none rounded-lg border border-transparent dark:bg-white-lilac-900 py-2 pl-3 pr-8 text-sm dark:text-white-lilac-50 focus:dark:border-white-lilac-50 focus:outline-none focus:dark:ring-white-lilac-50"
+              className="shadow-lg block w-full appearance-none rounded-lg border border-transparent py-2 pl-3 pr-8 text-sm focus:outline-none"
             >
               <option value="en" disabled={activeLang === "en"}>
                 EN
