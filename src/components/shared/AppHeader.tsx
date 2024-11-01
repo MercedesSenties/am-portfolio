@@ -1,11 +1,9 @@
 import { TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import Image from "next/image";
 import Link from "next/link";
+import SVGLogo from "public/images/logo";
 import React from "react";
 import { FiChevronDown, FiSun } from "react-icons/fi";
-import logoDark from "/public/images/logo-dark.svg";
-// import logoLight from "/public/images/logo-light.svg";
 import { THEME_MAP } from "@/definitions/constants";
 import { Slider } from "@mui/material";
 
@@ -32,7 +30,7 @@ const AppHeader: React.FC = () => {
         {/* Logo */}
         <div className="max-w-20">
           <Link href="/">
-            <Image src={logoDark} className="w-full" alt="Logo" />
+            <SVGLogo className="fill-[var(--primary-color)] w-full h-full" />
           </Link>
         </div>
 
