@@ -39,6 +39,13 @@ export type TThemeColor = {
   primary5: string;
 };
 
+export type TContact = {
+  title: string;
+  subtitle: string;
+  icon: IconType;
+  url: string;
+};
+
 export interface ComponentProps {
   t: (key: string) => string;
 }
