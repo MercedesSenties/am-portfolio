@@ -1,70 +1,85 @@
 {
-  "header.projects": "Projects",
-  "header.aboutMe": "About Me",
-  "header.contact": "Contact",
-
-  "banner.hello": "Hey, I'm Ana Mercedes",
-  "banner.description": "Programmer & Technical Digital Marketing Specialist",
-
-  "projects.intro": "Check out some of my favorite projects so far—websites, games, and a mix of different tech!",
-  "projects.duration": "Duration",
-  "projects.role": "Role",
-  "projects.contributions": "Contributions",
-  "projects.collaborators": "Collaborators",
-
-  "projects.tag.networking": "Networking",
-  "projects.tag.gameDev": "Game Dev",
-  "projects.tag.C#": "C#",
-  "projects.tag.unity": "Unity",
-  "projects.tag.multiplayerOnline": "Multiplayer Online",
-  "projects.tag.webDev": "Web Dev",
-  "projects.tag.wordpress": "Wordpress",
-  "projects.tag.html": "HTML",
-  "projects.tag.css": "CSS",
-  "projects.tag.shopify": "Shopify",
-  "projects.tag.liquid": "Liquid",
-  "projects.tag.facebook": "Facebook",
-  "projects.tag.google": "Google Suite",
-  "projects.tag.mailchimp": "Mailchimp",
-
-  "projects.fishyBusiness.description": "Play as a parent penguin who has to feed its chicks. Dive to hunt your fish or slap to steal opponent’s fish, in order to feed your babies and become the ultimate parent penguin!",
-  "projects.fishyBusiness.timeline": "April 2023 - August 2023",
-  "projects.fishyBusiness.role": "Gameplay, UI, audio & networking programmer",
-  "projects.fishyBusiness.contribution.1": "Implemented the lobby system using Netcode for Game Objects and Unity Relay",
-  "projects.fishyBusiness.contribution.2": "Implemented the attacking system allowing players to slap each other in order to steal their fish",
-  "projects.fishyBusiness.contribution.3": "Implemented the scoring system, allowing the players to fullfill their babies' desires",
-  "projects.fishyBusiness.contribution.4": "Implemented all the UI logic in the game",
-  "projects.fishyBusiness.contribution.5": "Implemented all the audio logic in the game",
-  "projects.fishyBusiness.team.1.role": "PM, 2D & Tech Artist, & Level Designer",
-  "projects.fishyBusiness.team.2.role": "3D Artist",
-  "projects.fishyBusiness.team.3.role": "Gameplay & UI programmer",
-
-  "projects.granjaHogar.description": "A Wordpress website for a Chihuahuan institution that offers a home and a dignified life to children and adolescents in situations of vulnerability and extreme poverty.",
-  "projects.granjaHogar.timeline": "June 2020 - July 2020",
-  "projects.granjaHogar.role": "Wordpress developer",
-  "projects.granjaHogar.contribution.1": "Developed the website using Wordpress",
-  "projects.granjaHogar.contribution.2": "Integrated the UI design handed by the client",
-
-  "projects.ruutel.description": "A Shopify online store that offers quality pieces at an affordable price from Mexico, Latin America and Korea.",
-  "projects.ruutel.timeline": "September 2021 - October 2021",
-  "projects.ruutel.role": "Shopify developer",
-  "projects.ruutel.contribution.1": "Developed the website using Shopify",
-  "projects.ruutel.contribution.2": "Integrated the UI design handed by the client",
-  "projects.ruutel.contribution.3": "Integrated currency and language change",
-
-  "projects.merce.description": "A Wordpress website for a short-stay surgery clinic.",
-  "projects.merce.timeline": "October 2019 - ongoing",
-  "projects.merce.role": "Wordpress developer & community manager",
-  "projects.merce.contribution.1": "Developed the website using Wordpress",
-  "projects.merce.contribution.2": "Manage Facebook account and community",
-  "projects.merce.contribution.3": "Design and send newsletters",
-  "projects.merce.contribution.4": "Manage Google positioning of the clinic",
-
-  "about.description": "I'm a highly motivated and adaptable programmer and Technical Digital Marketing Specialist from Mexico, fluent in English, Spanish, and Italian. With over a year of experience across both tech consulting and development companies, plus three more years of freelance experience, I’ve worked on creating websites, online stores, and apps using frameworks like Ionic and Gatsby, platforms like Wordpress and Shopify, as well as libraries like React. Additionally, I manage the technical setup for digital marketing campaigns, ensuring crucial events—such as eCommerce funnel tracking—are accurately implemented. My background includes formal studies in Programming and Communications. Outside of work, I enjoy singing, volunteering, and taking long walks with my dog, Ofelia. Driven by curiosity and a commitment to growth, I'm always seeking opportunities to learn more about new technologies and development practices.",
-
-  "contact.title": "I'd love to get in touch!",
-  "contact.description": "Feel free to send me a message on LinkedIn, or reach out over email.",
-  "contact.CV": "Resume",
-
-  "footer.text": "All Rights Reserved | Animations:"
+  "banner": {
+    "description": "With a background in Programming and Communication, a year of experience in tech consulting and development, plus three years of freelance work, I’ve developed websites, online stores, and apps using various frameworks, platforms, and libraries, and I've managed technical setups for digital marketing campaigns. <br><br>Originally from Mexico City, I am fluent in English, Spanish, and Italian. Outside of work, I enjoy singing, volunteering, and taking long walks with my dog, Ofelia.",
+    "subtitle": "Programmer & Technical Digital Marketing Specialist",
+    "title": "Hey, I'm Ana Mercedes"
+  },
+  "contact": {
+    "CV": "Resume",
+    "subtitle": "Feel free to send me a message, let's start something amazing.",
+    "title": "I'd love to get in touch!"
+  },
+  "experience": { "title": "Some technologies I've worked with" },
+  "footer": { "text": "All Rights Reserved | Animations:" },
+  "projects": {
+    "collaborators": "Collaborators",
+    "contributions": "Contributions",
+    "duration": "Duration",
+    "fishyBusiness": {
+      "contribution": {
+        "1": "Implemented the lobby system using Netcode for Game Objects and Unity Relay",
+        "2": "Implemented the attacking system allowing players to slap each other in order to steal their fish",
+        "3": "Implemented the scoring system, allowing the players to fullfill their babies' desires",
+        "4": "Implemented all the UI logic in the game",
+        "5": "Implemented all the audio logic in the game"
+      },
+      "description": "Play as a parent penguin who has to feed its chicks. Dive to hunt your fish or slap to steal opponent’s fish, in order to feed your babies and become the ultimate parent penguin!",
+      "role": "Gameplay, UI, audio & networking programmer",
+      "team": {
+        "1": { "role": "PM, 2D & Tech Artist, & Level Designer" },
+        "2": { "role": "3D Artist" },
+        "3": { "role": "Gameplay & UI programmer" }
+      },
+      "timeline": "April 2023 - August 2023"
+    },
+    "granjaHogar": {
+      "contribution": {
+        "1": "Developed the website using Wordpress",
+        "2": "Integrated the UI design handed by the client"
+      },
+      "description": "A Wordpress website for a Chihuahuan institution that offers a home and a dignified life to children and adolescents in situations of vulnerability and extreme poverty.",
+      "role": "Wordpress developer",
+      "timeline": "June 2020 - July 2020"
+    },
+    "merce": {
+      "contribution": {
+        "1": "Developed the website using Wordpress",
+        "2": "Manage Facebook account and community",
+        "3": "Design and send newsletters",
+        "4": "Manage Google positioning of the clinic"
+      },
+      "description": "A Wordpress website for a short-stay surgery clinic.",
+      "role": "Wordpress developer & community manager",
+      "timeline": "October 2019 - ongoing"
+    },
+    "role": "Role",
+    "ruutel": {
+      "contribution": {
+        "1": "Developed the website using Shopify",
+        "2": "Integrated the UI design handed by the client",
+        "3": "Integrated currency and language change"
+      },
+      "description": "A Shopify online store that offers quality pieces at an affordable price from Mexico, Latin America and Korea.",
+      "role": "Shopify developer",
+      "timeline": "September 2021 - October 2021"
+    },
+    "subtitle": "Websites, games, and a mix of different tech",
+    "tag": {
+      "C#": "C#",
+      "css": "CSS",
+      "facebook": "Facebook",
+      "gameDev": "Game Dev",
+      "google": "Google Suite",
+      "html": "HTML",
+      "liquid": "Liquid",
+      "mailchimp": "Mailchimp",
+      "multiplayerOnline": "Multiplayer Online",
+      "networking": "Networking",
+      "shopify": "Shopify",
+      "unity": "Unity",
+      "webDev": "Web Dev",
+      "wordpress": "Wordpress"
+    },
+    "title": "Check out some of my projects!"
+  }
 }
