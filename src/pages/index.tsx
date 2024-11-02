@@ -1,5 +1,5 @@
-import AboutMe from "@/components/about/AboutMe";
 import ContactDetails from "@/components/contact/ContactDetails";
+import Experience from "@/components/experience/Experience";
 import Projects from "@/components/projects/ProjectsGrid";
 import AppBanner from "@/components/shared/AppBanner";
 import { GetStaticProps } from "next";
@@ -10,7 +10,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 export const getStaticProps: GetStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale ?? "es", ["common"], {i18n})),
+      ...(await serverSideTranslations(locale ?? "es", ["common"], { i18n })),
     },
   };
 };
@@ -22,7 +22,7 @@ const Home = () => {
     <div className="container mx-auto">
       <AppBanner t={t} />
       <Projects t={t} />
-      <AboutMe t={t} />
+      <Experience t={t} />
       <ContactDetails t={t} i18n={i18n} />
     </div>
   );
