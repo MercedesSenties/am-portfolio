@@ -6,7 +6,7 @@ import merceYellow from "/public/images/merceYellow.gif";
 
 const AppBanner: React.FC<ComponentProps> = ({ t }) => {
   const [randomImage, setRandomImage] = useState<StaticImageData | null>(null);
-  
+
   useEffect(() => {
     const myImages: StaticImageData[] = [merceJump, merceYellow];
     const randomIndex = Math.floor(Math.random() * myImages.length);
@@ -14,30 +14,33 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
   }, []);
 
   return (
-    <div className="flex flex-col sm:justify-between items-center sm:flex-row mt-5 md:mt-2">
-      <div className="w-full text-left">
-        <h1 className="text-3xl md:text-5xl lg:text-5xl text-center sm:text-left uppercase !leading-tight">
-          {t("banner.hello")}
+    <div className="flex flex-col sm:justify-between items-center md:flex-row">
+      <div className="w-full text-left space-y-4">
+        <h1 className="text-3xl md:text-5xl text-center sm:text-left !leading-tight">
+          {t("banner.title")}
         </h1>
-        <p className="mt-4 text-lg md:text-xl lg:text-2xl text-center sm:text-left">
-          {t("banner.description")}
+        <p className="text-lg md:text-xl lg:text-2xl text-center sm:text-left font-semibold">
+          {t("banner.subtitle")}
         </p>
+        <p
+          dangerouslySetInnerHTML={{
+            __html: t("banner.description"),
+          }}
+        ></p>
       </div>
 
-      {
-        randomImage != null ? (
-            <div className="mt-4">
-              <Image
-                src={randomImage.src}
-                className="w-full cursor-default"
-                alt="Merce Image"
-                width={80}
-                height={80}
-                priority={true}
-              />
-            </div>
-        ) : (<></>)
-      }
+      {randomImage != null ? (
+        <Image
+          src={randomImage.src}
+          className="w-full md:w-1/2 cursor-default"
+          alt="Merce Image"
+          width={60}
+          height={60}
+          priority={true}
+        />
+      ) : (
+        <></>
+      )}
     </div>
   );
 };

@@ -1,14 +1,15 @@
 import { THEME_MAP } from "@/definitions/constants";
 import { TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import { Slider } from "@mui/material";
-import Link from "next/link";
+import { ClickAwayListener, Slider } from "@mui/material";
 import SVGLogo from "public/images/logo";
 import React from "react";
 import { FiChevronDown, FiSun } from "react-icons/fi";
 
 const AppHeader: React.FC = () => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
+  const [openSlider, setOpenSlider] = React.useState<boolean>(false);
+  const [theme, setTheme] = React.useState<number>(1);
 
   const changeThemeColors = (theme: number) => {
     document.documentElement.style.setProperty(
@@ -35,7 +36,7 @@ const AppHeader: React.FC = () => {
 
   // Set color on first load
   React.useEffect(() => {
-    changeThemeColors(1);
+    changeThemeColors(theme);
   });
 
   return (
@@ -44,25 +45,28 @@ const AppHeader: React.FC = () => {
       <div className="z-10 py-6 px-5 sm:px-0 flex justify-between items-center">
         {/* Logo */}
         <div className="max-w-20">
-          <Link href="/">
-            <SVGLogo className="fill-[var(--color--primary--100)] w-full h-full" />
-          </Link>
+          <SVGLogo className="fill-primary w-full h-full" />
         </div>
 
         <div className="inline-flex gap-2 items-center h-10">
           {/* Theme switcher*/}
-          <div className="p-3 shadow-md rounded-lg cursor-pointer h-full">
-            <FiSun />
-          </div>
-          <div className="w-32 bg-opacity-10 py-3 px-5 shadow rounded-lg h-full inline-flex items-center">
-            <Slider
-              defaultValue={1}
-              marks
-              min={1}
-              max={7}
-              size="medium"
-              onChange={(_, value) => changeThemeColors(value as number)}
-            />
+          <div className="relative h-10">
+            <ClickAwayListener onClickAway={() => setOpenSlider(false)}>
+              <div
+                className={`flex gap-5 p-3 shadow rounded-lg h-full items-center button-primary ${openSlider ? "w-32 xs:w-48 pl-5" : ""}`}
+              >
+                <Slider
+                  marks
+                  min={1}
+                  max={7}
+                  size="medium"
+                  onChange={(_, value) => changeThemeColors(value as number)}
+                  onChangeCommitted={(_, value) => setTheme(value as number)}
+                  className={`${openSlider ? "inline-block" : "!hidden"}`}
+                />
+                <FiSun onClick={() => setOpenSlider(!openSlider)} />
+              </div>
+            </ClickAwayListener>
           </div>
           {/* Language switcher */}
           <div className="relative">
@@ -71,7 +75,7 @@ const AppHeader: React.FC = () => {
               name="language"
               value={activeLang}
               onChange={(e) => switchLanguage(e.target.value as TLang)}
-              className="shadow-lg block w-full appearance-none rounded-lg border border-transparent py-2 pl-3 pr-8 text-sm focus:outline-none"
+              className="block w-full appearance-none border border-transparent py-2 pl-3 pr-8 text-sm focus:outline-none button-primary"
             >
               <option value="en" disabled={activeLang === "en"}>
                 EN

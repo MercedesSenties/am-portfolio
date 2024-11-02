@@ -34,12 +34,51 @@ h2 {
   @apply text-2xl sm:text-4xl;
 }
 
+.border-background {
+  border-color: var(--background);
+}
+
+.fill-primary {
+  fill: var(--color--primary--100);
+}
+
+.text-primary {
+  color: var(--color--primary--100) !important;
+}
+
+.text-background {
+  color: var(--background);
+}
+
+.bg-primary {
+  background-color: var(--color--primary--100);
+}
+
+.bg-primary-15 {
+  background-color: var(--color--primary--15);
+}
+
+.bg-primary-5 {
+  background-color: var(--color--primary--5) !important;
+}
+
 .font-raleway {
   font-family: var(--font-raleway);
 }
 
+.button-primary {
+  @apply shadow-md rounded-lg cursor-pointer;
+  background-color: var(--color--primary--5);
+  &:hover {
+    background-color: var(--color--primary--15);
+  }
+}
+
 /* Scroll to top style */
 .scrollToTop {
+  @apply shadow-md rounded-lg cursor-pointer;
+  background-color: var(--color--primary--100);
+  color: var(--background);
   position: fixed;
   width: 100%;
   align-items: center;
@@ -52,12 +91,43 @@ h2 {
   opacity: 1;
 }
 
-.scrollToTop:hover {
-  opacity: 1;
+.swiper-custom {
+  .swiper-button-prev,
+  .swiper-button-next {
+    @apply text-black;
+    &:after {
+      @apply text-2xl;
+    }
+  }
+  .swiper-button-prev {
+    @apply left-2;
+  }
+  .swiper-button-next {
+    @apply right-2;
+  }
+  .swiper-pagination-bullet {
+    @apply hover:bg-gray-600;
+  }
+  .swiper-pagination-bullet-active {
+    @apply bg-black hover:bg-gray-600;
+  }
 }
 
 /* Mui styles */
 .MuiListItem-root {
   display: block !important;
-  max-width: 250px;
+}
+
+.MuiSlider-root {
+  color: var(--color--primary--100) !important;
+}
+
+.MuiSlider-thumb {
+  &:hover {
+    box-shadow: 0px 0px 0px 8px var(--color--primary--15) !important;
+  }
+}
+
+.Mui-focusVisible {
+  box-shadow: 0px 0px 0px 8px var(--color--primary--15) !important;
 }
