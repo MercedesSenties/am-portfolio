@@ -7,7 +7,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      colors: {},
+      screens: {
+        xxs: "360px",
+        xs: "400px",
+      },
       container: {
         padding: {
           DEFAULT: "1rem",
