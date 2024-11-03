@@ -86,11 +86,11 @@ const AppHeader: React.FC = () => {
               onChange={(e) => switchLanguage(e.target.value as TLang)}
               className="block w-full appearance-none border border-transparent py-2 pl-3 pr-8 text-sm focus:outline-none button-primary"
             >
-              <option value="en" disabled={activeLang === "en"}>
-                EN
-              </option>
               <option value="es" disabled={activeLang === "es"}>
                 ES
+              </option>
+              <option value="en" disabled={activeLang === "en"}>
+                EN
               </option>
               <option value="it" disabled={activeLang === "it"}>
                 IT
