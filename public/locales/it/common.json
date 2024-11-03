@@ -14,21 +14,21 @@
   "projects": {
     "collaborators": "Collaboratori",
     "contributions": "Contributi",
-    "duration": "Durazione",
+    "duration": "Durata",
     "fishyBusiness": {
       "contribution": {
-        "1": "Ho implementato il sistema di lobby utilizzando Netcode for Game Objects e Unity Relay",
+        "1": "Ho implementato il sistema di lobby utilizzando Netcode for GameObjects e Unity Relay",
         "2": "Ho implementato il sistema di attacco che permette ai giocatori di schiaffeggiarsi l'un l'altro per rubare i loro pesci",
         "3": "Ho implementato il sistema di punteggio, che permette ai giocatori di esaudire i desideri dei loro bambini",
-        "4": "Ho implementato tutta la logica dell'UI del gioco",
-        "5": "Ho implementata tutta la logica audio del gioco"
+        "4": "Ho implementato tutta la logica UI del gioco",
+        "5": "Ho implementato tutta la logica audio del gioco"
       },
       "description": "Gioca nei panni di un pinguino genitore che deve nutrire i suoi pulcini. Tuffati per cacciare i tuoi pesci o schiaffeggia per rubare quelli dell'avversario, in modo da nutrire i tuoi piccoli e diventare il pinguino genitore supremo!",
       "role": "Developer di gameplay, UI, audio e networking",
       "team": {
         "1": { "role": "PM, 2D & Tech Artist, & Level Designer" },
         "2": { "role": "Artista 3D" },
-        "3": { "role": "Developer di gameplay e UI" }
+        "3": { "role": "Sviluppo gameplay e UI" }
       },
       "timeline": "Aprile 2023 - Agosto 2023"
     },
@@ -44,7 +44,7 @@
     "merce": {
       "contribution": {
         "1": "Ho sviluppato il sito web con Wordpress",
-        "2": "Gestisco l'account Facebook e la comunità",
+        "2": "Gestisco l'account Facebook e la sua comunità",
         "3": "Disegno e invio newsletter",
         "4": "Gestisco il posizionamento su Google della clinica"
       },
@@ -59,7 +59,7 @@
         "2": "Ho integrato il design UI fornito dal cliente",
         "3": "Ho integrato il cambio di valuta e di lingua"
       },
-      "description": "Un negozio online Shopify che offre pezzi di qualità a prezzi accessibili provenienti da Messico, America Latina e Corea",
+      "description": "Un negozio online Shopify che offre pezzi di qualità a prezzi accessibili provenienti dal Messico, America Latina e Corea",
       "role": "Sviluppatore Shopify",
       "timeline": "Settembre 2021 - Ottobre 2021"
     },

@@ -60,7 +60,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
             {openMore ? (
               <FiMinus className="h-8 w-8" />
             ) : (
-              <FiPlus className="w-8 h-8" />
+              <FiPlus className="w-8 h-8 hover:scale-125 transition-transform duration-500" />
             )}
           </CardActions>
         </CardContent>

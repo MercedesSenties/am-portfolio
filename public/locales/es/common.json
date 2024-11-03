@@ -17,7 +17,7 @@
     "duration": "Duración",
     "fishyBusiness": {
       "contribution": {
-        "1": "Implementado el sistema de lobby usando Netcode para Game Objects y Unity Relay",
+        "1": "Implementado el sistema de lobby usando Netcode for GameObjects y Unity Relay",
         "2": "Implementado el sistema de ataque que permite a los jugadores abofetearse unos a otros para robarles el pescado",
         "3": "Implementado el sistema de puntuación, permitiendo a los jugadores cumplir los deseos de sus bebés",
         "4": "Implementado toda la lógica de interfaz de usuario en el juego",

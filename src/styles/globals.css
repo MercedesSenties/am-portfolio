@@ -30,10 +30,6 @@ h6 {
   font-family: var(--font-raleway);
 }
 
-h2 {
-  @apply text-2xl sm:text-4xl;
-}
-
 .border-background {
   border-color: var(--background);
 }
@@ -91,6 +87,7 @@ h2 {
   opacity: 1;
 }
 
+/* Image Swiper style */
 .swiper-custom {
   .swiper-button-prev,
   .swiper-button-next {
