@@ -50,24 +50,33 @@ const AppHeader: React.FC = () => {
 
         <div className="inline-flex gap-2 items-center h-10">
           {/* Theme switcher*/}
-          <div className="relative h-10">
-            <ClickAwayListener onClickAway={() => setOpenSlider(false)}>
-              <div
-                className={`flex gap-5 p-3 shadow rounded-lg h-full items-center button-primary ${openSlider ? "w-32 xs:w-48 pl-5" : ""}`}
-              >
-                <Slider
-                  marks
-                  min={1}
-                  max={7}
-                  size="medium"
-                  onChange={(_, value) => changeThemeColors(value as number)}
-                  onChangeCommitted={(_, value) => setTheme(value as number)}
-                  className={`${openSlider ? "inline-block" : "!hidden"}`}
-                />
-                <FiSun onClick={() => setOpenSlider(!openSlider)} />
-              </div>
-            </ClickAwayListener>
-          </div>
+          <ClickAwayListener onClickAway={() => setOpenSlider(false)}>
+            <span>
+              {!openSlider && (
+                <div
+                  onClick={() => setOpenSlider(true)}
+                  className="button-primary p-3"
+                >
+                  <FiSun />
+                </div>
+              )}
+              {openSlider && (
+                <div
+                  className={`gap-5 flex p-3 h-10 items-center button-primary ${openSlider ? "w-32 xs:w-48 pl-5" : ""}`}
+                >
+                  <Slider
+                    marks
+                    min={1}
+                    max={7}
+                    size="medium"
+                    onChange={(_, value) => changeThemeColors(value as number)}
+                    onChangeCommitted={(_, value) => setTheme(value as number)}
+                  />
+                  <FiSun onClick={() => setOpenSlider(!openSlider)} />
+                </div>
+              )}
+            </span>
+          </ClickAwayListener>
           {/* Language switcher */}
           <div className="relative">
             <select
