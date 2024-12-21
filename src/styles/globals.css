@@ -108,6 +108,9 @@ h6 {
   .swiper-pagination-bullet-active {
     @apply bg-black hover:bg-gray-600;
   }
+  .swiper-wrapper {
+    max-height: 18.5rem;
+  }
 }
 
 /* Mui styles */

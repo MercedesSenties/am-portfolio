@@ -27,7 +27,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
               alt={`Slider Image ${index + 1}`}
               width={1920}
               height={1080}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
             />
           </SwiperSlide>
         ))}
