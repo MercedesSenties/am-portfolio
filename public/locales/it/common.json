@@ -52,6 +52,15 @@
       "role": "Sviluppatrice Wordpress e community manager",
       "timeline": "Ottobre 2019 - in corso"
     },
+    "ofrut": {
+      "contribution": {
+        "1": "Ho sviluppato un sito web moderno e reattivo utilizzando Next.js",
+        "2": "Ho collaborato con una designer UI/UX per garantire un'esperienza utente intuitiva e visivamente accattivante"
+      },
+      "description": "Un sito web Next.js per una fabbrica di marmellate e ripieni di frutta",
+      "role": "Sviluppatrice web",
+      "timeline": "Dicembre 2024 - in corso"
+    },
     "role": "Ruolo",
     "ruutel": {
       "contribution": {
@@ -78,7 +87,8 @@
       "shopify": "Shopify",
       "unity": "Unity",
       "webDev": "Web Dev",
-      "wordpress": "Wordpress"
+      "wordpress": "Wordpress",
+      "next": "Next.js"
     },
     "title": "Dai un'occhiata ad alcuni dei miei progetti!"
   }

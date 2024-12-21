@@ -3,6 +3,28 @@ import { TProject } from "@/definitions/types";
 export const projectsData: TProject[] = [
   {
     images: [
+      { src: "/images/projects/Ofrut-1.png", type: "image" },
+      { src: "/images/projects/Ofrut-2.png", type: "image" },
+      { src: "/images/projects/Ofrut-3.png", type: "image" },
+      { src: "/images/projects/Ofrut-4.png", type: "image" },
+    ],
+    title: "O'frut",
+    tags: [
+      "projects.tag.next",
+      "projects.tag.html",
+      "projects.tag.css",
+      "projects.tag.webDev",
+    ],
+    description: "projects.ofrut.description",
+    timeline: "projects.ofrut.timeline",
+    role: "projects.ofrut.role",
+    contributions: [
+      "projects.ofrut.contribution.1",
+      "projects.ofrut.contribution.2",
+    ],
+  },
+  {
+    images: [
       { src: "/images/projects/FishyBusiness-1.png", type: "image" },
       { src: "/images/projects/FishyBusiness-2.png", type: "image" },
       { src: "/images/projects/FishyBusiness-3.png", type: "image" },

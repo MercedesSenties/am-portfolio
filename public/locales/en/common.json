@@ -52,6 +52,15 @@
       "role": "Wordpress developer & community manager",
       "timeline": "October 2019 - ongoing"
     },
+    "ofrut": {
+      "contribution": {
+        "1": "Developed a modern and responsive website using Next.js.",
+        "2": "Collaborated closely with a UI/UX designer to ensure an intuitive and visually appealing user experience."
+      },
+      "description": "A Next.js website for a jams and fruit fillings factory",
+      "role": "Web developer",
+      "timeline": "December 2024 - ongoing"
+    },
     "role": "Role",
     "ruutel": {
       "contribution": {
@@ -78,7 +87,8 @@
       "shopify": "Shopify",
       "unity": "Unity",
       "webDev": "Web Dev",
-      "wordpress": "Wordpress"
+      "wordpress": "Wordpress",
+      "next": "Next.js"
     },
     "title": "Check out some of my projects!"
   }
