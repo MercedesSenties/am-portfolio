@@ -61,6 +61,16 @@
       "role": "Sviluppatrice web",
       "timeline": "Dicembre 2024 - in corso"
     },
+    "placido": {
+      "contributo": {
+        "1": "Ho sviluppato un tema personalizzato, moderno e responsive per Wordpress",
+        "2": "Ho collaborato con una designer UI/UX per garantire un'esperienza utente intuitiva e visivamente accattivante",
+        "3": "Ho integrato le funzionalità di un negozio online (checkout, login, ecc.) utilizzando Woocommerce."
+      },
+      "description": "Un negozio online Wordpress per un marchio che vende prodotti CBD",
+      "ruolo": "Sviluppatrice web",
+      "tempistica": "Novembre 2024 - Gennaio 2025"
+    },
     "role": "Ruolo",
     "ruutel": {
       "contribution": {
@@ -84,11 +94,13 @@
       "mailchimp": "Mailchimp",
       "multiplayerOnline": "Multigiocatore Online",
       "networking": "Networking",
+      "next": "Next.js",
+      "php": "PHP",
       "shopify": "Shopify",
       "unity": "Unity",
       "webDev": "Web Dev",
-      "wordpress": "Wordpress",
-      "next": "Next.js"
+      "woocommerce": "Woocommerce",
+      "wordpress": "Wordpress"
     },
     "title": "Dai un'occhiata ad alcuni dei miei progetti!"
   }

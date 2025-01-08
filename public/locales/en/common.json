@@ -61,6 +61,16 @@
       "role": "Web developer",
       "timeline": "December 2024 - ongoing"
     },
+    "placido": {
+      "contribution": {
+        "1": "Developed a modern and responsive custom Wordpress theme.",
+        "2": "Collaborated closely with a UI/UX designer to ensure an intuitive and visually appealing user experience.",
+        "3": "Integrated the functionalities for an e-commerce (checkout, login, etc.) using Woocommerce."
+      },
+      "description": "A Wordpress e-commerce for a brand that sells CBD related products.",
+      "role": "Web developer",
+      "timeline": "November 2024 - January 2025"
+    },
     "role": "Role",
     "ruutel": {
       "contribution": {
@@ -84,11 +94,13 @@
       "mailchimp": "Mailchimp",
       "multiplayerOnline": "Multiplayer Online",
       "networking": "Networking",
+      "next": "Next.js",
+      "php": "PHP",
       "shopify": "Shopify",
       "unity": "Unity",
       "webDev": "Web Dev",
-      "wordpress": "Wordpress",
-      "next": "Next.js"
+      "woocommerce": "Woocommerce",
+      "wordpress": "Wordpress"
     },
     "title": "Check out some of my projects!"
   }

@@ -3,6 +3,32 @@ import { TProject } from "@/definitions/types";
 export const projectsData: TProject[] = [
   {
     images: [
+      { src: "/images/projects/Placido-1.png", type: "image" },
+      { src: "/images/projects/Placido-2.png", type: "image" },
+      { src: "/images/projects/Placido-3.png", type: "image" },
+      { src: "/images/projects/Placido-4.png", type: "image" },
+      { src: "/images/projects/Placido-5.png", type: "image" },
+    ],
+    title: "Plácido",
+    tags: [
+      "projects.tag.wordpress",
+      "projects.tag.woocommerce",
+      "projects.tag.php",
+      "projects.tag.html",
+      "projects.tag.css",
+      "projects.tag.webDev",
+    ],
+    description: "projects.placido.description",
+    timeline: "projects.placido.timeline",
+    role: "projects.placido.role",
+    contributions: [
+      "projects.placido.contribution.1",
+      "projects.placido.contribution.2",
+    ],
+    buttonSrc: "https://placidocbd.mx/",
+  },
+  {
+    images: [
       { src: "/images/projects/Ofrut-1.png", type: "image" },
       { src: "/images/projects/Ofrut-2.png", type: "image" },
       { src: "/images/projects/Ofrut-3.png", type: "image" },

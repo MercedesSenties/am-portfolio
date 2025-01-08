@@ -54,12 +54,22 @@
     },
     "ofrut": {
       "contribution": {
-        "1": "Desarrollé un sitio web moderno y responsive usando Next.js",
+        "1": "Desarrollé un sitio web moderno y responsivo usando Next.js",
         "2": "Colaboré de la mano con una diseñadora de UI/UX para garantizar una experiencia de usuario intuitiva y visualmente atractiva."
       },
       "description": "Un sitio web de Next.js para una fábrica de mermeladas y rellenos de frutas",
       "role": "Desarrolladora web",
       "timeline": "diciembre 2024 - en curso"
+    },
+    "placido": {
+      "contribution": {
+        "1": "Desarrollé un tema personalizado, moderno y responsivo para Wordpress.",
+        "2": "Colaboré de la mano con una diseñadora de UI/UX para garantizar una experiencia de usuario intuitiva y visualmente atractiva.",
+        "3": "Integré las funcionalidades para una tienda en línea (checkout, inicio de sesión, etc.) usando Woocommerce."
+      },
+      "description": "Una tienda en línea de Wordpress para una marca que vende productos con CBD.",
+      "role": "Desarrolladora web",
+      "timeline": "noviembre 2024 - enero 2025"
     },
     "role": "Rol",
     "ruutel": {
@@ -84,11 +94,13 @@
       "mailchimp": "Mailchimp",
       "multiplayerOnline": "Multijugador Online",
       "networking": "Networking",
+      "next": "Next.js",
+      "php": "PHP",
       "shopify": "Shopify",
       "unity": "Unity",
       "webDev": "Web Dev",
-      "wordpress": "Wordpress",
-      "next": "Next.js"
+      "woocommerce": "Woocommerce",
+      "wordpress": "Wordpress"
     },
     "title": "¡Échale un ojo a algunos de mis proyectos!"
   }
