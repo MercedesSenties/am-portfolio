@@ -1,14 +1,15 @@
 import { THEME_MAP } from "@/definitions/constants";
 import { TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
-import { ClickAwayListener, Slider } from "@mui/material";
+import { ClickAwayListener } from "@mui/material";
 import SVGLogo from "public/images/logo";
 import React from "react";
+import { BsSquareHalf } from "react-icons/bs";
 import { FiChevronDown, FiSun } from "react-icons/fi";
 
 const AppHeader: React.FC = () => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
-  const [openSlider, setOpenSlider] = React.useState<boolean>(false);
+  const [openPopover, setOpenPopover] = React.useState<boolean>(false);
   const [theme, setTheme] = React.useState<number>(1);
 
   const changeThemeColors = (theme: number) => {
@@ -50,33 +51,39 @@ const AppHeader: React.FC = () => {
 
         <div className="inline-flex gap-2 items-center h-10">
           {/* Theme switcher*/}
-          <ClickAwayListener onClickAway={() => setOpenSlider(false)}>
-            <span>
-              {!openSlider && (
-                <div
-                  onClick={() => setOpenSlider(true)}
-                  className="button-primary p-3"
-                >
-                  <FiSun />
-                </div>
-              )}
-              {openSlider && (
-                <div
-                  className={`gap-5 flex p-3 h-10 items-center button-primary ${openSlider ? "w-32 xs:w-48 pl-5" : ""}`}
-                >
-                  <Slider
-                    marks
-                    min={1}
-                    max={7}
-                    size="medium"
-                    onChange={(_, value) => changeThemeColors(value as number)}
-                    onChangeCommitted={(_, value) => setTheme(value as number)}
-                  />
-                  <FiSun onClick={() => setOpenSlider(!openSlider)} />
+          <ClickAwayListener onClickAway={() => setOpenPopover(false)}>
+            <span className="relative h-full">
+              <div
+                onClick={() => setOpenPopover(!openPopover)}
+                className="button-primary h-full w-10 flex items-center justify-center"
+              >
+                <FiSun className="text-primary w-1/2 h-1/2" />
+              </div>
+              {openPopover && (
+                <div className="absolute mt-1 shadow-md rounded-lg right-0 bg-primary-15 p-3 min-w-36">
+                  <div className="grid grid-cols-4 gap-2">
+                    {[1, 2, 3, 4, 5, 6, 7].map((theme) => (
+                      <div
+                        key={theme}
+                        className="w-5 h-5 cursor-pointer rounded-md"
+                        style={{ backgroundColor: THEME_MAP[theme].primary100 }}
+                        onClick={() => {
+                          setTheme(theme);
+                          setOpenPopover(false);
+                        }}
+                      >
+                        <BsSquareHalf
+                          className="w-full h-full"
+                          style={{ color: THEME_MAP[theme].background }}
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </span>
           </ClickAwayListener>
+
           {/* Language switcher */}
           <div className="relative">
             <select
