@@ -30,34 +30,6 @@ h6 {
   font-family: var(--font-raleway);
 }
 
-.border-background {
-  border-color: var(--background);
-}
-
-.fill-primary {
-  fill: var(--color--primary--100);
-}
-
-.text-primary {
-  color: var(--color--primary--100) !important;
-}
-
-.text-background {
-  color: var(--background);
-}
-
-.bg-primary {
-  background-color: var(--color--primary--100);
-}
-
-.bg-primary-15 {
-  background-color: var(--color--primary--15);
-}
-
-.bg-primary-5 {
-  background-color: var(--color--primary--5) !important;
-}
-
 .font-raleway {
   font-family: var(--font-raleway);
 }

@@ -11,6 +11,13 @@ const config: Config = {
         xxs: "360px",
         xs: "400px",
       },
+      colors: {
+        primary: "var(--color--primary--100)",
+        "primary-5": "var(--color--primary--5)",
+        "primary-15": "var(--color--primary--15)",
+        "primary-33": "var(--color--primary--33)",
+        background: "var(--background)",
+      },
       container: {
         padding: {
           DEFAULT: "1rem",
