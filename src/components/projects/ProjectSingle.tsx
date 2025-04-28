@@ -23,9 +23,12 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
   if (!mounted || !project) return null;
 
   return (
-    <div ref={containerRef} className="relative overflow-hidden">
+    <div
+      ref={containerRef}
+      className="relative overflow-hidden rounded-lg shadow-md"
+    >
       <Card
-        className={`h-full flex shadow-none flex-col bg-primary-5 rounded-lg text-primary transform transition-transform duration-300 ease-out`}
+        className={`h-full flex flex-col !bg-primary-5 !text-primary transform transition-transform duration-300 ease-out`}
       >
         {openMore && (
           <div

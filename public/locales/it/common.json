@@ -1,6 +1,6 @@
 {
   "banner": {
-    "description": "Con una formazione in programmazione e comunicazione, un anno di esperienza in consulenza e sviluppo tecnologico, più tre anni di lavoro freelance, ho sviluppato siti web, negozi online e app utilizzando vari framework, piattaforme e librerie e ho gestito configurazioni tecniche per campagne di marketing digitale.<br><br> Originaria di Città del Messico, parlo fluentemente inglese, spagnolo e italiano. Fuori dal lavoro, mi piace cantare, fare volontariato e fare lunghe passeggiate con il mio cane, Ofelia.",
+    "description": "Con una formazione in programmazione e comunicazione, un anno di esperienza in consulenza e sviluppo tecnologico, più tre anni di lavoro freelance, ho sviluppato siti web, negozi online e app utilizzando vari framework, piattaforme e librerie e ho gestito configurazioni tecniche per campagne di marketing digitale.<br><br> Sempre più interessata a questioni di impatto sociale, equità e sostenibilità, sto concentrando le mie competenze tecniche su progetti e politiche pubbliche che contribuiscono a un impatto positivo.<br><br> Originaria di Città del Messico, parlo fluentemente inglese, spagnolo e italiano. Fuori dal lavoro, mi piace cantare, fare volontariato e fare lunghe passeggiate con il mio cane, Ofelia.",
     "subtitle": "Developer e tecnica specializzata in Digital Marketing",
     "title": "Ciao, sono Ana Mercedes"
   },
@@ -62,14 +62,26 @@
       "timeline": "Dicembre 2024 - in corso"
     },
     "placido": {
-      "contributo": {
-        "1": "Ho sviluppato un tema personalizzato, moderno e responsive per Wordpress",
+      "contribution": {
+        "1": "Ho sviluppato un tema Wordpress personalizzato moderno e reattivo",
         "2": "Ho collaborato con una designer UI/UX per garantire un'esperienza utente intuitiva e visivamente accattivante",
         "3": "Ho integrato le funzionalità di un negozio online (checkout, login, ecc.) utilizzando Woocommerce."
       },
       "description": "Un negozio online Wordpress per un marchio che vende prodotti CBD",
-      "ruolo": "Sviluppatrice web",
-      "tempistica": "Novembre 2024 - Gennaio 2025"
+      "role": "Sviluppatrice web",
+      "timeline": "Novembre 2024 - Gennaio 2025"
+    },
+    "realval": {
+      "contribution": {
+        "1": "Ho progettato un sito moderno basato sulle esigenze del cliente",
+        "2": "Ho sviluppato un tema Wordpress personalizzato moderno e reattivo",
+        "3": "Ho implementato tipi di post personalizzati per le proprietà e i progetti",
+        "4": "Ho aggiunto un filtro dinamico personalizzato per le proprietà.",
+        "5": "Ho adattato il CMS alle esigenze del cliente."
+      },
+      "description": "Un sito web Wordpress per una società immobiliare per mostrare le proprietà che hanno in affitto o in vendita",
+      "role": "Sviluppatrice e designer web",
+      "timeline": "Gennaio 2025 - in corso"
     },
     "role": "Ruolo",
     "ruutel": {

@@ -2,6 +2,7 @@ import { THEME_MAP } from "@/definitions/constants";
 import { TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import { ClickAwayListener } from "@mui/material";
+import Link from "next/link";
 import SVGLogo from "public/images/logo";
 import React from "react";
 import { BsSquareHalf } from "react-icons/bs";
@@ -45,9 +46,9 @@ const AppHeader: React.FC = () => {
       {/* Header */}
       <div className="z-10 py-6 px-5 sm:px-0 flex justify-between items-center">
         {/* Logo */}
-        <div className="max-w-20">
+        <Link href="/" className="max-w-20">
           <SVGLogo className="fill-primary w-full h-full" />
-        </div>
+        </Link>
 
         <div className="inline-flex gap-2 items-center h-10">
           {/* Theme switcher*/}
@@ -60,12 +61,12 @@ const AppHeader: React.FC = () => {
                 <FiSun className="text-primary w-1/2 h-1/2" />
               </div>
               {openPopover && (
-                <div className="absolute mt-1 shadow-md rounded-lg right-0 bg-primary-15 p-3 min-w-36">
+                <div className="absolute mt-1 shadow-lg rounded-lg right-0 bg-primary p-3 min-w-36">
                   <div className="grid grid-cols-4 gap-2">
                     {[1, 2, 3, 4, 5, 6, 7].map((theme) => (
                       <div
                         key={theme}
-                        className="w-5 h-5 cursor-pointer rounded-md"
+                        className="w-5 h-5 cursor-pointer rounded-[0.250em] border-black border"
                         style={{ backgroundColor: THEME_MAP[theme].primary100 }}
                         onClick={() => {
                           setTheme(theme);

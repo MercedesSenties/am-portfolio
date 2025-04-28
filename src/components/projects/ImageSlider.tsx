@@ -24,6 +24,7 @@ const ImageSlider: React.FC<ImageSliderProps> = ({ images }) => {
           <SwiperSlide key={index}>
             <Image
               src={image.src}
+              priority={true}
               alt={`Slider Image ${index + 1}`}
               width={1920}
               height={1080}

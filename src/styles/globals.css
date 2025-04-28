@@ -81,7 +81,7 @@ h6 {
     @apply bg-black hover:bg-gray-600;
   }
   .swiper-wrapper {
-    max-height: 18.5rem;
+    @apply h-44 xs:h-52 lg:h-72 2xl:h-96;
   }
 }
 

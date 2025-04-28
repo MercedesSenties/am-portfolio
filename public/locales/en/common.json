@@ -1,6 +1,6 @@
 {
   "banner": {
-    "description": "With a background in Programming and Communication, a year of experience in tech consulting and development, plus three years of freelance work, I’ve developed websites, online stores, and apps using various frameworks, platforms, and libraries, and I've managed technical setups for digital marketing campaigns. <br><br>Originally from Mexico City, I am fluent in English, Spanish, and Italian. Outside of work, I enjoy singing, volunteering, and taking long walks with my dog, Ofelia.",
+    "description": "With a background in Programming and Communication, a year of experience in tech consulting and development, plus three years of freelance work, I’ve developed websites, online stores, and apps using various frameworks, platforms, and libraries, and I've managed technical setups for digital marketing campaigns.<br><br> Increasingly interested in issues of social impact, equity and sustainability, I am focusing my technical expertise on projects and public policies that contribute to positive change.<br><br> Originally from Mexico City, I am fluent in English, Spanish, and Italian. Outside of work, I enjoy singing, volunteering, and taking long walks with my dog, Ofelia.",
     "subtitle": "Programmer & Technical Digital Marketing Specialist",
     "title": "Hey, I'm Ana Mercedes"
   },
@@ -70,6 +70,18 @@
       "description": "A Wordpress e-commerce for a brand that sells CBD related products.",
       "role": "Web developer",
       "timeline": "November 2024 - January 2025"
+    },
+    "realval": {
+      "contribution": {
+        "1": "Designed a modern site based on the client's needs.",
+        "2": "Developed a modern and responsive custom Wordpress theme.",
+        "3": "Implemented custom post types for the properties and projects.",
+        "4": "Added a custom dynamic filter for the properties.",
+        "5": "Adapted the CMS to the client necessities."
+      },
+      "description": "A Wordpress website for a real estate company to showcase the properties they have on rent or sale.",
+      "role": "Web developer & designer",
+      "timeline": "January 2025 - ongoing"
     },
     "role": "Role",
     "ruutel": {

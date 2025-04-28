@@ -3,6 +3,35 @@ import { TProject } from "@/definitions/types";
 export const projectsData: TProject[] = [
   {
     images: [
+      { src: "/images/projects/Realval-1.png", type: "image" },
+      { src: "/images/projects/Realval-2.png", type: "image" },
+      { src: "/images/projects/Realval-3.png", type: "image" },
+      { src: "/images/projects/Realval-4.png", type: "image" },
+      { src: "/images/projects/Realval-5.png", type: "image" },
+      { src: "/images/projects/Realval-6.png", type: "image" },
+    ],
+    title: "Realval SA",
+    tags: [
+      "projects.tag.wordpress",
+      "projects.tag.php",
+      "projects.tag.html",
+      "projects.tag.css",
+      "projects.tag.webDev",
+    ],
+    description: "projects.realval.description",
+    timeline: "projects.realval.timeline",
+    role: "projects.realval.role",
+    contributions: [
+      "projects.realval.contribution.1",
+      "projects.realval.contribution.2",
+      "projects.realval.contribution.3",
+      "projects.realval.contribution.4",
+      "projects.realval.contribution.5",
+    ],
+    buttonSrc: "https://www.realvalsa.ch/",
+  },
+  {
+    images: [
       { src: "/images/projects/Placido-1.png", type: "image" },
       { src: "/images/projects/Placido-2.png", type: "image" },
       { src: "/images/projects/Placido-3.png", type: "image" },

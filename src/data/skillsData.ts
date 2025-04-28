@@ -3,21 +3,21 @@ import {
   SiCsharp,
   SiFigma,
   SiFirebase,
-  SiGatsby,
   SiGithub,
   SiGoogleanalytics,
   SiGoogletagmanager,
   SiHtml5,
-  SiIonic,
   SiJavascript,
   SiMeta,
   SiNextdotjs,
+  SiPhp,
   SiReact,
   SiShopify,
   SiTailwindcss,
   SiTiktok,
   SiTypescript,
   SiUnity,
+  SiWix,
   SiWordpress,
 } from "react-icons/si";
 
@@ -31,16 +31,6 @@ export const skillsData: TSkill[] = [
     id: "nextjs",
     title: "Next.js",
     icon: SiNextdotjs,
-  },
-  {
-    id: "ionic",
-    title: "Ionic",
-    icon: SiIonic,
-  },
-  {
-    id: "gatsby",
-    title: "Gatsby",
-    icon: SiGatsby,
   },
   {
     id: "html",
@@ -63,6 +53,11 @@ export const skillsData: TSkill[] = [
     icon: SiJavascript,
   },
   {
+    id: "php",
+    title: "PHP",
+    icon: SiPhp,
+  },
+  {
     id: "c-sharp",
     title: "C#",
     icon: SiCsharp,
@@ -71,6 +66,11 @@ export const skillsData: TSkill[] = [
     id: "wordpress",
     title: "WordPress",
     icon: SiWordpress,
+  },
+  {
+    id: "wix",
+    title: "Wix",
+    icon: SiWix,
   },
   {
     id: "shopify",

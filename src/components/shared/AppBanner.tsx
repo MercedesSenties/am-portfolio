@@ -14,8 +14,8 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
   }, []);
 
   return (
-    <div className="flex flex-col sm:justify-between items-center md:flex-row">
-      <div className="w-full text-left space-y-4">
+    <div className="grid grid-cols-1 lg:grid-cols-5 items-center">
+      <div className="w-full text-left space-y-4 lg:col-span-3">
         <h1 className="text-3xl md:text-5xl text-center sm:text-left !leading-tight">
           {t("banner.title")}
         </h1>
@@ -32,7 +32,7 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
       {randomImage != null ? (
         <Image
           src={randomImage.src}
-          className="w-full md:w-1/2 cursor-default"
+          className="md:w-1/2 w-full lg:w-full mx-auto cursor-default lg:col-span-2"
           alt="Merce Image"
           width={60}
           height={60}
