@@ -2,52 +2,45 @@ import { TThemeColor } from "./types";
 
 export const THEME_MAP: Record<number, TThemeColor> = {
   1: {
-    background: "rgb(222 235 238 / 1)",
-    primary100: "rgb(30 40 42 / 1)",
-    primary33: "rgb(30 40 42 / 0.333)",
-    primary15: "rgb(30 40 42 / 0.15)",
-    primary5: "rgb(30 40 42 / 0.05)",
+    background: "rgb(150 158 170 / 1)", // Soft, neutral tone
+    primary100: "rgb(242 235 216 / 1)",
+    primary33: "rgb(242 235 216 / 0.33)",
+    primary15: "rgb(242 235 216 / 0.15)",
+    primary5: "rgb(242 235 216 / 0.05)",
   },
   2: {
-    background: "rgb(213 227 222 / 1)",
-    primary100: "rgb(38 54 49 / 1)",
-    primary33: "rgb(38 54 49 / 0.333)",
-    primary15: "rgb(38 54 49 / 0.15)",
-    primary5: "rgb(38 54 49 / 0.05)",
+    background: "rgb(78 102 122 / 1)", // Muted, deeper tone
+    primary100: "rgb(239 224 188 / 1)",
+    primary33: "rgb(239 224 188 / 0.33)",
+    primary15: "rgb(239 224 188 / 0.15)",
+    primary5: "rgb(239 224 188 / 0.05)",
   },
   3: {
-    background: "rgb(209 218 203 / 1)",
-    primary100: "rgb(59 66 54 / 1)",
-    primary33: "rgb(59 66 54 / 0.333)",
-    primary15: "rgb(59 66 54 / 0.15)",
-    primary5: "rgb(59 66 54 / 0.05)",
+    background: "rgb(178 90 97 / 1)", // Muted, reddish tone for contrast
+    primary100: "rgb(235 218 180 / 1)",
+    primary33: "rgb(235 218 180 / 0.33)",
+    primary15: "rgb(235 218 180 / 0.15)",
+    primary5: "rgb(235 218 180 / 0.05)",
   },
   4: {
-    background: "rgb(157 68 51 / 1)",
-    primary100: "rgb(243 216 184 / 1)",
-    primary33: "rgb(243 216 184 / 0.45)",
-    primary15: "rgb(243 216 184 / 0.22)",
-    primary5: "rgb(243 216 184 / 0.12)",
+    background: "rgb(171 99 76 / 1)", // Muted terracotta, softer orange
+    primary100: "rgb(238 222 183 / 1)",
+    primary33: "rgb(238 222 183 / 0.33)",
+    primary15: "rgb(238 222 183 / 0.15)",
+    primary5: "rgb(238 222 183 / 0.05)",
   },
   5: {
-    background: "rgb(84 60 89 / 1)",
-    primary100: "rgb(255 177 177 / 1)",
-    primary33: "rgb(255 177 177 / 0.45)",
-    primary15: "rgb(255 177 177 / 0.22)",
-    primary5: "rgb(255 177 177 / 0.12)",
+    background: "rgb(122 78 124 / 1)", // Earthy, pale purple (adjusted)
+    primary100: "rgb(232 215 177 / 1)",
+    primary33: "rgb(232 215 177 / 0.33)",
+    primary15: "rgb(232 215 177 / 0.15)",
+    primary5: "rgb(232 215 177 / 0.05)",
   },
   6: {
-    background: "rgb(24 41 56 / 1)",
-    primary100: "rgb(183 212 245 / 1)",
-    primary33: "rgb(183 212 245 / 0.45)",
-    primary15: "rgb(183 212 245 / 0.22)",
-    primary5: "rgb(183 212 245 / 0.12)",
-  },
-  7: {
-    background: "rgb(5 26 28 / 1)",
-    primary100: "rgb(195 235 241 / 1)",
-    primary33: "rgb(195 235 241 / 0.45)",
-    primary15: "rgb(195 235 241 / 0.22)",
-    primary5: "rgb(195 235 241 / 0.12)",
+    background: "rgb(34 42 56 / 1)", // Darker tone for contrast
+    primary100: "rgb(239 224 188 / 1)",
+    primary33: "rgb(239 224 188 / 0.33)",
+    primary15: "rgb(239 224 188 / 0.15)",
+    primary5: "rgb(239 224 188 / 0.05)",
   },
 };

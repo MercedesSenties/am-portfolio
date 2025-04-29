@@ -1,19 +1,41 @@
 import { THEME_MAP } from "@/definitions/constants";
-import { TLang } from "@/definitions/types";
+import { ComponentProps, TLang } from "@/definitions/types";
 import useLanguageSwitcher from "@/hooks/useLanguageSwitcher";
 import { ClickAwayListener } from "@mui/material";
 import Link from "next/link";
 import SVGLogo from "public/images/logo";
 import React from "react";
-import { BsSquareHalf } from "react-icons/bs";
-import { FiChevronDown, FiSun } from "react-icons/fi";
+import { FaSquare } from "react-icons/fa";
+import { FiChevronDown } from "react-icons/fi";
+import { IoMdColorFill } from "react-icons/io";
 
-const AppHeader: React.FC = () => {
+const AppHeader: React.FC<ComponentProps> = ({ t }) => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
   const [openPopover, setOpenPopover] = React.useState<boolean>(false);
-  const [theme, setTheme] = React.useState<number>(1);
+  const [currentTheme, setCurrentTheme] = React.useState<number | string>(1);
 
-  const changeThemeColors = (theme: number) => {
+  const changeThemeColors = (theme: number | string) => {
+    if (typeof theme === "string") {
+      document.documentElement.style.setProperty("--background", theme);
+      document.documentElement.style.setProperty(
+        "--color--primary--100",
+        THEME_MAP[2].primary100
+      );
+      document.documentElement.style.setProperty(
+        "--color--primary--33",
+        THEME_MAP[2].primary33
+      );
+      document.documentElement.style.setProperty(
+        "--color--primary--15",
+        THEME_MAP[2].primary15
+      );
+      document.documentElement.style.setProperty(
+        "--color--primary--5",
+        THEME_MAP[2].primary5
+      );
+      return;
+    }
+
     document.documentElement.style.setProperty(
       "--background",
       THEME_MAP[theme].background
@@ -36,10 +58,22 @@ const AppHeader: React.FC = () => {
     );
   };
 
-  // Set color on first load
+  // Load theme on first mount
   React.useEffect(() => {
-    changeThemeColors(theme);
-  });
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      const themeId = parseInt(savedTheme, 10);
+      setCurrentTheme(isNaN(themeId) ? savedTheme : themeId);
+    }
+  }, []);
+
+  // Update theme whenever currentTheme changes
+  React.useEffect(() => {
+    if (currentTheme !== undefined) {
+      localStorage.setItem("theme", currentTheme.toString());
+      changeThemeColors(currentTheme);
+    }
+  }, [currentTheme]);
 
   return (
     <div className="sm:container sm:mx-auto">
@@ -58,27 +92,60 @@ const AppHeader: React.FC = () => {
                 onClick={() => setOpenPopover(!openPopover)}
                 className="button-primary h-full w-10 flex items-center justify-center"
               >
-                <FiSun className="text-primary w-1/2 h-1/2" />
+                <IoMdColorFill className="text-primary w-1/2 h-1/2" />
               </div>
               {openPopover && (
-                <div className="absolute mt-1 shadow-lg rounded-lg right-0 bg-primary p-3 min-w-36">
-                  <div className="grid grid-cols-4 gap-2">
-                    {[1, 2, 3, 4, 5, 6, 7].map((theme) => (
+                <div className="absolute mt-1 shadow-lg rounded-lg right-0 bg-primary">
+                  <div className="grid grid-cols-3 gap-2 p-3 min-w-28">
+                    {[1, 2, 3, 4, 5, 6].map((theme) => (
                       <div
                         key={theme}
-                        className="w-5 h-5 cursor-pointer rounded-[0.250em] border-black border"
-                        style={{ backgroundColor: THEME_MAP[theme].primary100 }}
+                        className="cursor-pointer rounded-[0.250em] border-black border"
+                        style={{
+                          backgroundColor: THEME_MAP[theme].primary100,
+                        }}
                         onClick={() => {
-                          setTheme(theme);
+                          setCurrentTheme(theme);
                           setOpenPopover(false);
                         }}
                       >
-                        <BsSquareHalf
+                        <FaSquare
                           className="w-full h-full"
-                          style={{ color: THEME_MAP[theme].background }}
+                          style={{
+                            color: THEME_MAP[theme].background,
+                          }}
                         />
                       </div>
                     ))}
+                    <form
+                      onSubmit={(e) => {
+                        e.preventDefault();
+                        const formData = new FormData(e.currentTarget);
+                        const color = formData.get("theme")?.toString();
+                        if (color) {
+                          setCurrentTheme(color);
+                          setOpenPopover(false);
+                        }
+                      }}
+                      className="col-span-3 w-full mt-2"
+                    >
+                      <input
+                        type="color"
+                        name="theme"
+                        className="w-full border border-black rounded cursor-pointer bg-transparent"
+                        defaultValue={
+                          typeof currentTheme === "string"
+                            ? currentTheme
+                            : "#fdfdfd"
+                        }
+                      />
+                      <button
+                        type="submit"
+                        className="text-xs px-2 py-1 rounded bg-black text-white w-full"
+                      >
+                        {t("color_switcher.apply")}
+                      </button>
+                    </form>
                   </div>
                 </div>
               )}

@@ -34,7 +34,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
       </Head>
 
-      <AppHeader />
+      <AppHeader t={t} />
       <Component {...pageProps} />
       <AppFooterCopyright t={t} />
       <UseScrollToTop />
