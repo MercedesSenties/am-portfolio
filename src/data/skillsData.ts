@@ -1,7 +1,5 @@
 import { TSkill } from "@/definitions/types";
 import {
-  SiCsharp,
-  SiFigma,
   SiFirebase,
   SiGithub,
   SiGoogleanalytics,
@@ -11,13 +9,13 @@ import {
   SiMeta,
   SiNextdotjs,
   SiPhp,
+  SiPinterest,
   SiReact,
   SiShopify,
   SiTailwindcss,
   SiTiktok,
   SiTypescript,
   SiUnity,
-  SiWix,
   SiWordpress,
 } from "react-icons/si";
 
@@ -58,29 +56,14 @@ export const skillsData: TSkill[] = [
     icon: SiPhp,
   },
   {
-    id: "c-sharp",
-    title: "C#",
-    icon: SiCsharp,
-  },
-  {
     id: "wordpress",
     title: "WordPress",
     icon: SiWordpress,
   },
   {
-    id: "wix",
-    title: "Wix",
-    icon: SiWix,
-  },
-  {
     id: "shopify",
     title: "Shopify",
     icon: SiShopify,
-  },
-  {
-    id: "figma",
-    title: "Figma",
-    icon: SiFigma,
   },
   {
     id: "firebase",
@@ -106,6 +89,11 @@ export const skillsData: TSkill[] = [
     id: "tiktok",
     title: "TikTok",
     icon: SiTiktok,
+  },
+  {
+    id: "pinterest",
+    title: "Pinterest",
+    icon: SiPinterest,
   },
   {
     id: "gtm",
