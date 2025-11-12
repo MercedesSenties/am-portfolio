@@ -44,7 +44,11 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
           <div className="flex gap-2 items-center justify-center">
             <h3 className="text-xl">{project.title}</h3>
             {project.buttonSrc && (
-              <a href={project.buttonSrc} target="__blank">
+              <a
+                href={project.buttonSrc}
+                target="__blank"
+                onClick={(e) => e.stopPropagation()}
+              >
                 <FiExternalLink className="text-lg hover:scale-125 transition-transform duration-500" />
               </a>
             )}
@@ -69,7 +73,7 @@ const ProjectSingle: React.FC<ProjectProps> = ({ t, project }) => {
         </CardContent>
       </Card>
       <Slide in={openMore} direction="right" container={containerRef.current}>
-        <div className="absolute max-w-[70%] bg-primary text-background top-0 left-0 h-full px-2 overflow-y-auto z-10 rounded-s-lg">
+        <div className="absolute max-w-[80%] bg-primary text-background top-0 left-0 h-full px-2 overflow-y-auto z-10 rounded-s-lg">
           <List>
             <ListItem>
               <ListItem component="div" disablePadding className="my-2">

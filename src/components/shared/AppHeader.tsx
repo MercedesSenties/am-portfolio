@@ -9,7 +9,7 @@ import { FaSquare } from "react-icons/fa";
 import { FiChevronDown } from "react-icons/fi";
 import { IoMdColorFill } from "react-icons/io";
 
-const AppHeader: React.FC<ComponentProps> = ({ t }) => {
+const AppHeader: React.FC<ComponentProps> = () => {
   const [activeLang, switchLanguage] = useLanguageSwitcher();
   const [openPopover, setOpenPopover] = React.useState<boolean>(false);
   const [currentTheme, setCurrentTheme] = React.useState<number | string>(1);
@@ -117,35 +117,6 @@ const AppHeader: React.FC<ComponentProps> = ({ t }) => {
                         />
                       </div>
                     ))}
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        const formData = new FormData(e.currentTarget);
-                        const color = formData.get("theme")?.toString();
-                        if (color) {
-                          setCurrentTheme(color);
-                          setOpenPopover(false);
-                        }
-                      }}
-                      className="col-span-3 w-full mt-2"
-                    >
-                      <input
-                        type="color"
-                        name="theme"
-                        className="w-full border border-black rounded cursor-pointer bg-transparent"
-                        defaultValue={
-                          typeof currentTheme === "string"
-                            ? currentTheme
-                            : "#fdfdfd"
-                        }
-                      />
-                      <button
-                        type="submit"
-                        className="text-xs px-2 py-1 rounded bg-black text-white w-full"
-                      >
-                        {t("color_switcher.apply")}
-                      </button>
-                    </form>
                   </div>
                 </div>
               )}
