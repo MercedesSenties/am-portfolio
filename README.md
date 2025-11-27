@@ -10,14 +10,9 @@
 - Run `npm run build`
 - Run `npm run start`
 
-## Deploy to firebase hosting
+## Deploy to hosting
 
-- You need to have firebase globally installed. For that, run `npm i -g firebase-tools`
-- Make sure you're logged in to the acccount where the project is. Run `firebase login`
-- You need to start firebase frameworks to deploy a SSR site. Run `firebase experiments:enable webframeworks`
-- You need to init firebase hosting. Run `firebase init hosting`
-- To test the service is working and see the site as in production, run `firebase emulators:start`
-- Deploy to hosting using `firebase deploy`
+- The project is connected to Vercel and it's automatically deployed whenever the changes are pushed to the main branch of the repository
 
 ## Add new projects
 

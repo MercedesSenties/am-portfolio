@@ -32,6 +32,7 @@ const AppBanner: React.FC<ComponentProps> = ({ t }) => {
       {randomImage != null ? (
         <Image
           src={randomImage.src}
+          unoptimized
           className="md:w-1/2 w-full lg:w-full mx-auto cursor-default lg:col-span-2"
           alt="Merce Image"
           width={60}
